@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@800&display=swap');
+
+@font-face {
+    font-family: 'Google Sans';
+    src: url('/ProductSans-Regular.tff');
+}
+
+.usersdiv {
+  width: 100%;
+  height: 100vh;
+  padding: 20px 0;
+  background-color: #85aee4;
+  margin-top: 78;
+}
+.userdiv-user {
+  
+}
+#copy, #copy2 {
+  display: none;
+}
+h1 {
+  display: inline-block;
+}
+#roomid {
+  display: inline-block;
+  margin-left: 8px;
+  user-select: all;
+}
+#roomid:hover {
+  cursor: pointer;
+}
+body {
+  overflow: hidden;
+  font-family: 'Google Sans', sans-serif;
+  letter-spacing: 2px;
+  user-select: none;
+  padding: 0;
+  margin: 0;
+}
+#join-link {
+  color: white;
+}
+hr {
+  margin: 0;
+  height: 0px;
+}
+.headerdiv {
+  position: absolute;
+  top: 0;
+  color: white;
+  width: 100%;
+  left: 0;
+  background: #6b7afa;
+  height: auto;
+}
+#j-copy {
+  border-radius: 6px;
+  background: #ffffff;
+  margin-bottom: 5px;
+  height: 56px;
+  border: 2px solid #eeeeee;
+}
+
+#j-copy:hover {
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid #eeeeee;
+}

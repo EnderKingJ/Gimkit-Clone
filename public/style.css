@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@font-face {
+    font-family: 'Google Sans';
+    src: url('/ProductSans-Regular.tff');
+}
+@font-face {
+    font-family: 'Google Sans Thin';
+    src: url('/ProductSans-Regular.tff');
+}
+
+#baldiv {
+  z-index: 999999999999;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Google Sans', sans-serif;
+  letter-spacing: 2px;
+  user-select: none;
+  background-color: #bfbfbf;
+  -webkit-transition: background-color 1000ms linear;
+  -ms-transition: background-color 1000ms linear;
+  transition: background-color 1000ms linear;
+  overflow: hidden;
+}
+
+#gimkit-font-join-small {
+  font-family: 'Google Sans Thin', sans-serif;
+  font-weight: lighter;
+}
+
+#gimkit-font-join-large {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+#gimkit-font-join-space-small {
+  font-size: 1px;
+}
+
+.button-frame-01 {
+  text-align: center;
+  width: 100%;
+  height: auto;
+  user-select: none;
+}
+
+.inputdiv-body-home {
+  text-align: center;
+  margin: auto;
+  margin-top: auto;
+  position:absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  width: 400px;
+  height: 200px;
+  padding-top: 20px;
+  border-radius: 10px;
+  border: 2px #ffffff solid;
+  background: #5568a7
+}
+
+#id {
+  border-radius: 6px;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #eeeeee;
+  padding-left: 5px;
+}
+
+#id::placeholder {
+  font-size: 15px;
+}
+
+#name {
+  border-radius: 6px;
+  width: 200px;
+  height: 50px;
+  border: 2px solid #eeeeee;
+  padding-left: 5px;
+}
+
+#name::placeholder {
+  font-size: 15px;
+}
+
+input[type=submit] {
+  border-radius: 6px;
+  background: #ffffff;
+  width: 70px;
+  height: 56px;
+  border: 2px solid #eeeeee;
+}
+
+input[type=submit]:hover {
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid #eeeeee;
+}
+
+h1 {
+  color: white;
+}
+
+#starting-soon {
+  margin-top: -50px;
+}
+
+svg {
+  width: 100px;
+}
+
+.start {
+  display: none;
+}
+
+.before-start {
+  height: 100vh;
+  width: 100%;
+  padding-top: 400px;
+  background-color: #85aee4;
+}
+
+.question {
+  display: none;
+}
+
+.cbutton {
+  display: inline-block;
+  margin-left: 5px;
+  color: #ffffff;
+  margin-right: 5px;
+  border: 3px inset #bbbbbb;
+  background: #aaaaaa;
+  width: calc(84% - 50px);
+  height: 250px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+
+.correct {
+  background-color: #38c258;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+
+.sbutton {
+  display: inline-block;
+  margin-left: 5px;
+  color: #ffffff;
+  margin-right: 5px;
+  border: 3px inset #bbbbbb;
+  background: #aaaaaa;
+  width: calc(40% - 50px);
+  height: 250px;
+  margin-top: 5px;
+  font-size: 20px;
+}
+.button-frame-01 {
+  margin-top: 10%;
+}
+#q2 {
+  display: none;
+}
+
+.b1 {
+  background: crimson;
+  border-color: crimson;
+}
+.b2 {
+  background: yellow;
+  border-color: yellow;
+}
+.b3 {
+  background: lightgreen;
+  border-color: lightgreen;
+}
+.b4 {
+  background: lightblue;
+  border-color: lightblue;
+}
+
+#invalid-id-input {
+  border-top: 3px solid #ff2828;
+  background-color: #ff6969;
+  width: 285px;
+  margin: auto;
+  margin-top: 5px;
+  height: auto;
+  color: white;
+}
+#invalid-name-input {
+  border-top: 3px solid #ff2828;
+  background-color: #ff6969;
+  width: 285px;
+  margin: auto;
+  margin-top: 5px;
+  height: auto;
+  color: white;
+}
+
+/*Credits to https://tobiasahlin.com/spinkit/ for this animation*/
+
+.sk-folding-cube {
+  width: 40px;
+  height: 40px;
+  top: 40%;
+  right: 48%;
+  margin: auto;
+  position: absolute;
+  -webkit-transform: rotateZ(45deg);
+          transform: rotateZ(45deg);
+}
+
+.sk-folding-cube .sk-cube {
+  float: left;
+  width: 50%;
+  height: 50%;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1); 
+}
+.sk-folding-cube .sk-cube:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  -webkit-animation: sk-foldCubeAngle 2.4s infinite linear both;
+          animation: sk-foldCubeAngle 2.4s infinite linear both;
+  -webkit-transform-origin: 100% 100%;
+      -ms-transform-origin: 100% 100%;
+          transform-origin: 100% 100%;
+}
+.sk-folding-cube .sk-cube2 {
+  -webkit-transform: scale(1.1) rotateZ(90deg);
+          transform: scale(1.1) rotateZ(90deg);
+}
+.sk-folding-cube .sk-cube3 {
+  -webkit-transform: scale(1.1) rotateZ(180deg);
+          transform: scale(1.1) rotateZ(180deg);
+}
+.sk-folding-cube .sk-cube4 {
+  -webkit-transform: scale(1.1) rotateZ(270deg);
+          transform: scale(1.1) rotateZ(270deg);
+}
+.sk-folding-cube .sk-cube2:before {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+.sk-folding-cube .sk-cube3:before {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s; 
+}
+.sk-folding-cube .sk-cube4:before {
+  -webkit-animation-delay: 0.9s;
+          animation-delay: 0.9s;
+}
+@-webkit-keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  } 
+}
+
+@keyframes sk-foldCubeAngle {
+  0%, 10% {
+    -webkit-transform: perspective(140px) rotateX(-180deg);
+            transform: perspective(140px) rotateX(-180deg);
+    opacity: 0; 
+  } 25%, 75% {
+    -webkit-transform: perspective(140px) rotateX(0deg);
+            transform: perspective(140px) rotateX(0deg);
+    opacity: 1; 
+  } 90%, 100% {
+    -webkit-transform: perspective(140px) rotateY(180deg);
+            transform: perspective(140px) rotateY(180deg);
+    opacity: 0; 
+  }
+}

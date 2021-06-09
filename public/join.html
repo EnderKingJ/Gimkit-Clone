@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>chaey</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body, html {
+      background: #313f8c;
+    }
+  </style>
+</head>
+<body>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1291" height="1000px"></canvas></div>
+    <div class="inputdiv-body-home">
+    <h1><span id="gimkit-font-join-large">Gimkit</span><span id="gimkit-font-join-space-small"></span><span id="gimkit-font-join-small">Clone</span></h1>
+    <form id="id-join">
+    <input id="id" placeholder="Enter Game ID" type="number" maxlength="20">
+    <input type="submit" value="Join"><br>
+    <div id="invalid-id-input" style="display: none;">Invalid ID</div>
+    </form>
+    <form id="name-join" style="display: none;">
+    <input id="name" placeholder="Enter Name" type="text" maxlength="20">
+    <input type="submit" value="Join">
+    <div id="invalid-name-input" style="display: none;">Invalid Name</div>
+    </form>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/index.js"></script>
+  <script defer src="/particles/particle.js"></script>
+  <script defer src="/particles/papp.js"></script>
+</body>
+</html>

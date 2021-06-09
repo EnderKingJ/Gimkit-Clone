@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>chaey</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="baldiv">
+    <h1 id="money">$999</h1>
+  </div>
+  <div class="correct" style="display: none;">
+  <h1><b><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 100 100;" xml:space="preserve">
+<polygon style="fill:#FFFFFF;" points="241.216,396.952 120.176,302.664 154.6,258.496 228.92,316.392 351.6,139.376   397.632,171.28 "/>
+</svg></b></h1>
+  <button class="continue cbutton s2"><b>Continue</b></button><br>
+  <button class="shop cbutton s1"><b>Shop</b></button>
+  </div>
+  <div class="before-start" id="before-start">
+    <center>
+  <div class="sk-folding-cube">
+  <div class="sk-cube1 sk-cube"></div>
+  <div class="sk-cube2 sk-cube"></div>
+  <div class="sk-cube4 sk-cube"></div>
+  <div class="sk-cube3 sk-cube"></div>
+  </div>
+    <p></p><br><br><p id="starting-soon">The Game is Starting Soon.</p>
+    </center>
+  </div>
+  <div class="button-frame-01">
+  <div class="start" id="q1">
+  <h1><b>What is 2+2?</b></h1>
+  <button class="sbutton b1 ibutton" id="1"><b>1</b></button>
+  <button class="sbutton b2 cbutton" id="2"><b>4</b></button><br>
+  <button class="sbutton b3 ibutton" id="3"><b>6</b></button>
+  <button class="sbutton b4 ibutton" id="4"><b>22</b></button>
+  </div>
+  <div class="question" id="q2">
+  <h1><b>What is 9+10?</b></h1>
+  <button class="sbutton b1 ibutton" id="5"><b>910</b></button>
+  <button class="sbutton b2 ibutton" id="6"><b>21</b></button><br>
+  <button class="sbutton b3 cbutton" id="7"><b>19</b></button>
+  <button class="sbutton b4 ibutton" id="8"><b>Don't Know</b></button>
+  </div>
+  <div class="question" id="q3">
+  <h1><b>What is 32*10</b></h1>
+  <button class="sbutton b1 ibutton" id="9"><b>42</b></button>
+  <button class="sbutton b2 ibutton" id="10"><b>3210</b></button><br>
+  <button class="sbutton b3 ibutton" id="11"><b>32</b></button>
+  <button class="sbutton b4 cbutton" id="12"><b>320</b></button>
+  </div>
+  </div>
+  <div class="end-screen" id="end-screen">
+    <button id="clap" class="clap-button">Clap</button>
+  </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/main.js"></script>
+  <script defer src="/game.js"></script>
+</body>
+</html>
