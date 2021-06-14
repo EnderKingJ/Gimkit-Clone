@@ -3,21 +3,196 @@
 
 @font-face {
     font-family: 'Google Sans';
-    src: url('/ProductSans-Regular.tff');
+    src: url('/ProductSans-Regular.ttf');
+}
+
+html {
+  visibility: hidden;
+}
+
+#timer {
+  position: absolute;
+  color: white;
+  top: -9px;
+  left: 10px;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#gimkit-font-join-small {
+  font-family: 'Google Sans Thin', sans-serif;
+  font-weight: lighter;
+}
+
+#gimkit-font-join-large {
+  font-family: 'Google Sans', sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+}
+
+#title {
+  background: none;
+  position: absolute;
+  color: white;
+  right: 10px;
+}
+
+ol {
+  text-align: left;
+  font-weight: bold;
+  margin-left: 0;
+  font-size: 25px;
+}
+
+li {
+  background: black;
+  border: 2px solid #eeeeee;
+  text-align: center;
+  width: 80%;
+  margin-top: 5px;
+}
+
+#upgrades {
+  position: absolute;
+  height: 100vh;
+  overflow: auto;
+  width: 80%;
+  right: 0;
+  border: 2px solid #ffffff;
+  background: #384174;
+  top: 150px;
+}
+
+#upgrades {
+  font-size: 30px;
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#leaderboard {
+  position: absolute;
+  left: 0;
+  height: 100vh;
+  width: 20%;
+  border: 2px solid #ffffff;
+  background: #384174;
+  top: 150px;  
+  font-size: 20px;
+  color: white;
+  padding-left: 10px;
+  padding-top: 10px;
+}
+
+#after-end {
+  width: 100%;
+  height: calc(100vh + 50px);
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  padding-top: 15px;
+  background: #505da7;
+}
+
+#clap-count {
+  position: absolute;
+  left: 3%;
+  top: 3%;
+}
+
+#particles-js {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  margin-top: 200px;
+}
+
+#particles-js-canvas-el {
+  position: absolute;
+  top: 0;
+}
+
+#total-money {
+  color: white;
+  margin-left: 10px;
+  margin-top: 21px;
+  margin-bottom: 100px;
+}
+
+#maintext {
+  margin-bottom: 3px;
+  margin-left: 10px;
+}
+
+#usercount {
+  position: absolute;
+  top: 75px;
+  color: white;
+  display: inline-block;
+  left: 10px;
+  width: auto;
+  height: auto;
+}
+
+#startbutton {
+  position: absolute;
+  right: 3px;
+  top: 87px;
+  border-radius: 6px;
+  background: #ffffff;
+  margin-bottom: 5px;
+  height: 56px;
+  width: 100px;
+  -webkit-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
+  border: 2px solid #eeeeee;
+}
+
+#startbutton:hover {
+  cursor: pointer;
+  background: #43ee76
+}
+
+.userdiv {
+  width: 100%;
+  height: 100vh;
+  margin-top: 67px;
+  border-top: 3px solid white;
+  background-color: #5c6ab4;
 }
 
 .usersdiv {
   width: 100%;
   height: 100vh;
-  padding: 20px 0;
-  background-color: #85aee4;
-  margin-top: 78;
+  z-index: -1;
+  padding: 81px 0;
+  background-color: #717aaf;
 }
 .userdiv-user {
-  
+  border-radius: 6px;
+  background: #000000;
+  height: auto;
+  padding: 10px 5px;
+  width: 100px;
+  margin-left: 5px;
+  margin-right: 5px;
+  color: white;
+  margin-top: 10px;
+  vertical-align: top;
+  border: 2px solid #eeeeee;
 }
-#copy, #copy2 {
-  display: none;
+#copy3, #copy2 {
+  display: block;
 }
 h1 {
   display: inline-block;
@@ -25,7 +200,7 @@ h1 {
 #roomid {
   display: inline-block;
   margin-left: 8px;
-  user-select: all;
+  user-select: auto;
 }
 #roomid:hover {
   cursor: pointer;
@@ -35,10 +210,14 @@ body {
   font-family: 'Google Sans', sans-serif;
   letter-spacing: 2px;
   user-select: none;
+  background-color: #5c6ab4;
   padding: 0;
   margin: 0;
 }
 #join-link {
+  color: white;
+}
+#after-end {
   color: white;
 }
 hr {
@@ -46,19 +225,23 @@ hr {
   height: 0px;
 }
 .headerdiv {
-  position: absolute;
+  position: sticky;
   top: 0;
   color: white;
   width: 100%;
+  text-align: center;
   left: 0;
-  background: #6b7afa;
+  background: #505da7;
   height: auto;
 }
 #j-copy {
   border-radius: 6px;
   background: #ffffff;
-  margin-bottom: 5px;
   height: 56px;
+  margin-top: 10px;
+  margin-left: 10px;
+  vertical-align: top;
+  top: 0;
   border: 2px solid #eeeeee;
 }
 
@@ -66,4 +249,24 @@ hr {
   border-radius: 6px;
   cursor: pointer;
   border: 2px solid #eeeeee;
+}
+
+#g-end {
+  position: absolute;
+  top: 78px;
+  right: 10px;
+  border-radius: 6px;
+  background: #ffffff;
+  margin-bottom: 5px;
+  height: 56px;
+  width: 100px;
+  -webkit-transition: background-color 250ms linear;
+  -ms-transition: background-color 250ms linear;
+  transition: background-color 250ms linear;
+  border: 2px solid #eeeeee;
+}
+
+#g-end:hover {
+  cursor: pointer;
+  background: #f13232
 }

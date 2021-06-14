@@ -1,0 +1,26 @@
+{
+  "name": "Forest's Game",
+  "version": "1.0.0",
+  "description": "Hi there bunny rabbit!",
+  "author": "ForestCam",
+  "questions": [
+    {
+      "title": "Life? Universe? Everything??",
+      "correct-answer": "21",
+      "other-answers": [
+        "20",
+        "19",
+        "DUCKS"
+      ]
+    },
+    {
+      "title": "What is the derivative of y⁴",
+      "correct-answer": "3y³",
+      "other-answers": [
+        "y³",
+        "4y⁵",
+        "2y²"
+      ]
+    }
+  ]
+}

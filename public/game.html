@@ -7,15 +7,19 @@
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/enderkingj/gimkit-clone/public/favicon.ico" type="image/x-icon"/>
 </head>
 <body>
-  <div id="baldiv">
-    <h1 id="money">$999</h1>
+  <div class="navbar">
+    <h1 id="money">$0</h1>
+    <img src="exit-shop.png" id="exit-shop" width="30" height="39"/>
   </div>
   <div class="correct" style="display: none;">
-  <h1><b><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 100 100;" xml:space="preserve">
-<polygon style="fill:#FFFFFF;" points="241.216,396.952 120.176,302.664 154.6,258.496 228.92,316.392 351.6,139.376   397.632,171.28 "/>
-</svg></b></h1>
-  <button class="continue cbutton s2"><b>Continue</b></button><br>
-  <button class="shop cbutton s1"><b>Shop</b></button>
+  <h1 id="after-question-gain"><b>$0</b></h1>
+  <button class="continue cobutton s2"><b>Continue</b></button><br>
+  <button class="shopbtn shobutton s1"><b>Shop</b></button>
+  </div>
+  <div class="incorrect" style="display: none;">
+  <h1 id="after-question-loss"><b>$0</b></h1>
+  <button class="continue cobutton s2"><b>Continue</b></button><br>
+  <button class="shopbtn shobutton s1"><b>Shop</b></button>
   </div>
   <div class="before-start" id="before-start">
     <center>
@@ -29,34 +33,88 @@
     </center>
   </div>
   <div class="button-frame-01">
-  <div class="start" id="q1">
-  <h1><b>What is 2+2?</b></h1>
-  <button class="sbutton b1 ibutton" id="1"><b>1</b></button>
-  <button class="sbutton b2 cbutton" id="2"><b>4</b></button><br>
-  <button class="sbutton b3 ibutton" id="3"><b>6</b></button>
-  <button class="sbutton b4 ibutton" id="4"><b>22</b></button>
-  </div>
-  <div class="question" id="q2">
-  <h1><b>What is 9+10?</b></h1>
-  <button class="sbutton b1 ibutton" id="5"><b>910</b></button>
-  <button class="sbutton b2 ibutton" id="6"><b>21</b></button><br>
-  <button class="sbutton b3 cbutton" id="7"><b>19</b></button>
-  <button class="sbutton b4 ibutton" id="8"><b>Don't Know</b></button>
-  </div>
-  <div class="question" id="q3">
-  <h1><b>What is 32*10</b></h1>
-  <button class="sbutton b1 ibutton" id="9"><b>42</b></button>
-  <button class="sbutton b2 ibutton" id="10"><b>3210</b></button><br>
-  <button class="sbutton b3 ibutton" id="11"><b>32</b></button>
-  <button class="sbutton b4 cbutton" id="12"><b>320</b></button>
-  </div>
   </div>
   <div class="end-screen" id="end-screen">
     <button id="clap" class="clap-button">Clap</button>
   </div>
+  <div class="shop shopp" id="shop">
+    <button class="shbutton" id="perquestionopen">Money Per Question</button>
+    <button class="shbutton" id="streakbonusopen">Streak Bonus</button>
+    <button class="shbutton" id="multiplieropen">Multiplier</button>
+    <button class="shbutton" id="insuranceopen">Insurance</button>
+  </div>
+
+  <div class="streakbonusshop shopp" id="streakbonusshop">
+    <button class="shopbutton" id="streakbonusupgrade1">Level 1 ($1) - Free</button>
+    <button class="shopbutton" id="streakbonusupgrade2">Level 2 ($3) - $20</button>
+    <button class="shopbutton" id="streakbonusupgrade3">Level 3 ($10) - $50</button>
+    <button class="shopbutton" id="streakbonusupgrade4">Level 4 ($50) - $250</button>
+    <button class="shopbutton" id="streakbonusupgrade5">Level 5 ($100) - $1000</button>
+    <button class="shopbutton" id="streakbonusupgrade6">Level 6 ($1000) - $10000</button>
+    <button class="shopbutton" id="streakbonusupgrade7">Level 7 ($10000) - $250000</button>
+    <button class="shopbutton" id="streakbonusupgrade8">Level 2 ($100000) - $1500000</button>
+  </div>
+
+  <div class="perquestionshop shopp" id="perquestionshop">
+    <button class="shopbutton" id="perquestionupgrade1">Level 1 ($1) - Free</button>
+    <button class="shopbutton" id="perquestionupgrade2">Level 2 ($5) - $10</button>
+    <button class="shopbutton" id="perquestionupgrade3">Level 3 ($50) - $100</button>
+    <button class="shopbutton" id="perquestionupgrade4">Level 4 ($2000) - $15000</button>
+    <button class="shopbutton" id="perquestionupgrade5">Level 5 ($10000) - $50000</button>
+    <button class="shopbutton" id="perquestionupgrade6">Level 6 ($50000) - $500000</button>
+    <button class="shopbutton" id="perquestionupgrade7">Level 7 ($250000) - $5000000</button>
+    <button class="shopbutton" id="perquestionupgrade8">Level 8 ($1000000) - $100000000</button>
+  </div>
+
+  <div class="multipliershop shopp" id="multipliershop">
+    <button class="shopbutton" id="multiplierupgrade1">Level 1 (x1) - Free</button>
+    <button class="shopbutton" id="multiplierupgrade2">Level 2 (x1.5) - $50</button>
+    <button class="shopbutton" id="multiplierupgrade3">Level 3 (x2) - $300</button>
+    <button class="shopbutton" id="multiplierupgrade4">Level 4 (x3) - $2500</button>
+    <button class="shopbutton" id="multiplierupgrade5">Level 5 (x5) - $50000</button>
+    <button class="shopbutton" id="multiplierupgrade6">Level 6 (x10) - $2500000</button>
+    <button class="shopbutton" id="multiplierupgrade7">Level 7 (x25) - $50000000</button>
+    <button class="shopbutton" id="multiplierupgrade8">Level 8 (x100) - $1000000000</button>
+  </div>
+
+  <div class="insuranceshop shopp" id="insuranceshop">
+    <button class="shopbutton" id="insuranceupgrade1">Level 1 (0%) - Free</button>
+    <button class="shopbutton" id="insuranceupgrade2">Level 2 (10%) - $50</button>
+    <button class="shopbutton" id="insuranceupgrade3">Level 3 (20%) - $300</button>
+    <button class="shopbutton" id="insuranceupgrade4">Level 4 (30%) - $2500</button>
+    <button class="shopbutton" id="insuranceupgrade5">Level 5 (50%) - $50000</button>
+    <button class="shopbutton" id="insuranceupgrade6">Level 6 (60%) - $2500000</button>
+    <button class="shopbutton" id="insuranceupgrade7">Level 7 (75%) - $50000000</button>
+    <button class="shopbutton" id="insuranceupgrade8">Level 8 (90%) - $1000000000</button>
+  </div>
+
+  <div class="after-end">
+  <div class="navbar" style="padding-top: 0;">
+    <h1 id="title"><span id="gimkit-font-join-large">Gimkit</span><span id="gimkit-font-join-space-small"></span><span id="gimkit-font-join-small">Clone</span></h1>
+  </div>
+  <div id="enddiv" style="margin-top: 50px;height: 150px;  padding: 100px 0;">
+  <h1 class="ending-placement">0th Place</h1>
+  </div><br>
+  <div class="clap">
+  <p id="claps">Clap - 0</p>
+  </div><br>
+  <div id="enddiv">
+  <h1 class="sa" style="color: green"><span style="color:black">Total Money:</span><br><span class="end-money">$0</span></h1>
+  </div><br>
+  <div id="enddiv">
+  <h1 class="sa" style="color: green"><span style="color:black">Total Correct:</span><br><span class="total-right">0</span></h1> 
+  </div><br>
+  <div id="enddiv">
+  <h1 class="sa" style="color: red"><span style="color:black">Total Wrong:</span><br><span class="total-wrong">0</span></h1>
+  </div><br>
+  <div id="enddiv">
+  <h1 class="sa" style="color:black"><span style="color:black">Total Attempted:</span><br><span class="total-attempted">0</span></h1>
+  </div><br><br><br>
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script defer src="/main.js"></script>
   <script defer src="/game.js"></script>
+  <script defer src="/shop.js"></script>
+  <script src='/lodash.js'></script>
 </body>
 </html>

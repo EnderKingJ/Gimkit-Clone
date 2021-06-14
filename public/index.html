@@ -1,29 +1,58 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <link rel="stylesheet" href="indexstyle.css">
   <title>chaey</title>
+  <link rel="stylesheet" href="style.css">
   <link rel="icon" href="https://cdn.jsdelivr.net/gh/enderkingj/gimkit-clone/public/favicon.ico" type="image/x-icon"/>
+  <style>
+    body, html {
+      background: #313f8c;
+    }
+  </style>
 </head>
 <body>
-  <div id="before-start-main">
-  <div class="headerdiv">
-  <div>
-  <h1>Go to <b><a id="join-link" href="https://gimkit-clone.enderkingj.repl.co/join" target="_blank">Gimkit-Clone.enderkingj.repl.co/join</a></b> And Enter Code</h1><h1 id="roomid" data-clipboard-target="#copy2">99999999</h1>
-  <button id="j-copy" data-clipboard-target="#copy">Copy Join Link</button>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1291" height="1000px"></canvas></div>
+    <div class="inputdiv-body-home">
+    <h1><span id="gimkit-font-join-large">Gimkit</span><span id="gimkit-font-join-space-small"></span><span id="gimkit-font-join-small">Clone</span></h1>
+    <div id="indexdiv">
+    <button id="host">Host a Game</button>
+    <button id="join">Join a Game</button>
+    </div>
+    <div id="joindiv" style="display: none;">
+    <form id="id-join">
+    <input id="id" placeholder="Enter Game ID" type="number" maxlength="20">
+    <input type="submit" value="Join"><br>
+    <div id="invalid-id-input" style="display: none;">Invalid ID</div>
+    </form>
+    <form id="name-join" style="display: none;">
+    <input id="name" placeholder="Enter Name" type="text" maxlength="20">
+    <input type="submit" value="Join">
+    <div id="invalid-name-input" style="display: none;">Invalid Name</div>
+    </form>
+    </div>
+    <div id="hostdiv" style="display: none;">
+    <form id="songf">
+        <select id="song" name="song">
+            <option value="">Select a Song</option>
+            <option value="thanos">Thanos</option>
+            <option value="lava">The Floor is Lava</option>
+            <option value="halloween">Humans v. Zombies</option>
+            <option value="">Classic</option>
+            <option value="draw">Draw</option>
+        </select>
+    <input type="submit" value="Join"><br>
+    </form>
+    <form id="timef" style="display: none;">
+    <input id="time" placeholder="Enter Time (Seconds)" type="text" maxlength="20">
+    <input type="submit" value="Join">
+    </form>
+    </div>
   </div>
-  </div>
-  <br><br><br><br>
-  <div class="usersdiv"><button class="start-button" id="startbutton">Start</button></div>
-  </div>
-  <div id="after-start-main" style="display: none;">
-  </div>
-  <script defer src="/home.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
   <script src="/socket.io/socket.io.js"></script>
-  <script src="/clipboard.min.js"></script>
-  <input id="copy" value="https://example.com">
-  <input id="copy2" value="https://example.com">
+  <script defer src="/homepage.js"></script>
+  <script defer src="/particles/particle.js"></script>
+  <script defer src="/particles/papp.js"></script>
 </body>
 </html>

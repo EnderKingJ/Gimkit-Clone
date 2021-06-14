@@ -1,11 +1,34 @@
 const socket = io();
-new ClipboardJS('#roomid');
-new ClipboardJS('#j-copy');
-let usercount = 0;
+let params = new URLSearchParams(document.location.search.substring(1));
+let beep;
+if (!params.get('song')) {
+beep = new Audio('/sounds/music.mp3');
+} else if (params.get('song')=="draw") {
+beep = new Audio('/sounds/draw.mp3');
+} else if (params.get('song')=="halloween") {
+beep = new Audio('/sounds/halloween.mp3');
+} else if (params.get('song')=="thanos") {
+beep = new Audio('/sounds/thanos.mp3');
+} else if (params.get('song')=="lava") {
+beep = new Audio('/sounds/lava.mp3');
+} 
+let end = new Audio('/sounds/end.mp3');
+let time;
+if (!params.get('time')) {
+  time = 600
+} else {
+  time = params.get('time')
+}
+let clapcount = 0;
+let userBalances = {};
 let roomid;
 
+$(document).ready(function() {
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+});
+
 const generateroom = () => {
-roomid = Math.random() * (99999999 - 10000000) + 10000000;
+roomid = Math.random() * (99999 - 10000) + 10000;
 roomid += ''
 roomid = roomid.split('.');
 roomid = roomid[0];
@@ -21,23 +44,50 @@ if (localStorage.getItem('aid')) {
 generateroom()
 }
 
-document.getElementById('copy').value = `https://${document.location.host}/join?id=${document.getElementById('roomid').innerHTML}`
+function play(time_in_milisec){
 
-document.getElementById('copy2').value = document.getElementById('roomid').innerHTML
+beep.loop = true;
+beep.play();
+setTimeout(() => { beep.pause(); }, time_in_milisec);
+}
 
-function start(e) {
-  if(usercount>1) {
-  startgame()
+function usercount() {
+  return Object.keys(userBalances).length;
+}
+
+function start() {
+  if(usercount()>0) {
+  play(600*1000);
   socket.emit('start', {room: roomid})
+  starttimer(time)
+  document.getElementById('before-start-main').style.display = "none"
+  document.getElementById('after-start-main').style.display = "block"
+  var upgradebox = document.getElementById('upgrades')
+  var utext = document.createElement('div')
+  utext.id = "upgrade";
+  utext.innerHTML = `<b style="color:lightgreen">The Game</b> Has Started!`
+  upgradebox.appendChild(utext)
   } else {
-    alert('You need at least two players to start!')
+    alert('You need at least one player to start!')
   }
 }
 
-function startgame() {
-  document.getElementById('before-start-main').style.display = "none"
-  document.getElementById('after-start-main').style.display = "block"
+function starttimer(e){
+  var interval = setInterval(function() {
+    var h = Math.floor(e / 3600).toString().padStart(2,'0'),
+        m = Math.floor(e % 3600 / 60).toString().padStart(2,'0'),
+        s = Math.floor(e % 60).toString().padStart(2,'0');
+    
+    document.getElementById('timer').innerHTML = m+':'+s
 
+      if(e==0) {
+        document.getElementById('timer').innerHTML = 'ended'
+        endgame()
+        clearInterval(interval)
+        }
+        e = e-1
+        }, 1000)
+        
 }
 
 socket.emit('joinmain', {username: 'admin', room: roomid})
@@ -47,22 +97,108 @@ socket.on('joined', (e) => {
 })
 
 const addUser = (name) => {
-  usercount += 1
-  userbox = document.createElement('div')
+  if (!userBalances[name]) {
+    userBalances[name] = 0
+  }
+  updateLeaderBoard()
+  userbox = document.createElement('button')
+  userbox.id = 'user'
+  userbox.onclick = function() {remove(this)}
   userbox.classList.add('userdiv-user')
   userbox.textContent = name
-  usersdiv = document.querySelector('.usersdiv')
+  $('#usercount').text(usercount()+' Players')
+  usersdiv = document.querySelector('.userdiv')
   usersdiv.appendChild(userbox)
 }
 
-document.getElementsByTagName('button')[0].addEventListener('click', function() {
-  alert('Join URL Copied To Clipboard.')
-})
-
 document.getElementById('join-link').textContent = document.location.host
 
-document.getElementById('join-link').href = 'https://'+document.location.host
+document.getElementById('join-link').href = 'https://'+document.location.host+'/?action=join'
 
 socket.on('clap', function() {
-  alert('clap')
+  clapcount = (clapcount*1)+(1*1)
+  document.getElementById('clap-count').innerHTML = clapcount+' Claps'
 })
+
+function remove(el) {
+  element = el
+  element.remove();
+  socket.emit('kickuser', {user: element.textContent, room: roomid})
+}
+
+socket.on('gameend', () => {
+})
+
+$('#g-end').click(function() {
+  endgame()
+})
+
+function endgame() {
+  beep.pause()
+  $('#after-start-main').fadeOut('fast')
+  $('.after-end').fadeIn('fast')
+  socket.emit('gameend', {room: roomid, standings: standingsByUsername()})
+  end.play()
+}
+
+socket.on('upgradebought', (e) => {
+  console.log(`${e.user} Upgraded ${e.upgrade} to Level ${e.level}`)
+  var upgradebox = document.getElementById('upgrades')
+  var utext = document.createElement('div')
+  utext.id = "upgrade";
+  utext.innerHTML = `${e.user} Upgraded <b style="color:yellow">${e.upgrade}</b> to Level ${e.level}`
+  upgradebox.appendChild(utext)
+})
+
+function totalMoney() {
+  let sum = 0
+  for (const [username, balance] of Object.entries(userBalances)) {
+     sum += balance;
+  }
+  return sum;
+}
+
+function standingsByUsername() {
+  let placement = 0;
+  let byUsername = {}
+  standings().forEach((s) => {
+    placement += 1
+    const [username, balance] = s;
+    byUsername[username] = {
+      placement: placement
+    }
+  })
+  return byUsername;
+}
+
+function standings() {
+  return _.reverse(_.sortBy(Object.entries(userBalances), ['balance']));
+}
+
+let place = 0;
+
+function updateLeaderBoard() {
+  if (document.getElementById('leaders')) {
+   document.getElementById('leaders').remove()
+  }
+  $('#leaderboard').html("<ol id='leaders'>" + standings().map((e) => {
+     const [username, balance] = e;
+     return ` <li> ${username}: $${balance}</li>`
+  }).join("\n") + "</ol>")
+}
+
+socket.on('balance', (e) => {
+  userBalances[e.username] = (userBalances[e.username]) + e.delta;
+  console.log("userBalances", userBalances)
+  console.log("total", totalMoney())
+  $('#total-money').text('$'+totalMoney())
+  updateLeaderBoard()
+})
+
+$('#roomid').click(function() {
+  document.getElementById('roomidcopy').select()
+  document.execCommand('copy')
+  $.notify("Join Link Copied To Clipboard!", "success");
+})
+
+document.getElementById('roomidcopy').value = 'https://'+document.location.host+"/join?id="+roomid

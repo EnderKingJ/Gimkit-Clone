@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="indexstyle.css">
+  <title>chaey</title>
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/enderkingj/gimkit-clone/public/favicon.ico" type="image/x-icon"/>
+</head>
+<body>
+  <div id="before-start-main">
+  <div class="headerdiv">
+  <div>
+  <h1 id="maintext"><h1>Join at <b><a id="join-link" href="https://gimkit-clone.enderkingj.repl.co/?action=join" target="_blank">Gimkit-Clone.enderkingj.repl.co/</a></b> And Enter Code</h1><h1 id="roomid" data-clipboard-target="#copy6" class="roomid">99999999</h1></h1>
+  </div>
+  </div>
+  <div class="userdiv">
+  </div>
+  <div class="usersdiv">
+    <h1 id="usercount">0 Players</h1>
+    <button class="start-button" id="startbutton">Start</button></div>
+  </div>
+  <div id="after-start-main" style="display: none;">
+    <div class="navbar"></div>
+    <button id="g-end">End Game</button>
+    <h1 class="total-money" id="total-money">$0</h1>
+    <h1 id="timer">10:00</h1>
+    <div id="leaderboard">
+    </div>
+    <div id="upgrades">
+    </div>
+  </div>
+  <div class="after-end" id="after-end" style="display:none;">
+    <div class="headerdiv" style="text-align: left;height:87px;">
+    <h1 id="clap-count">0 Claps</h1>
+    <h1 id="title"><span id="gimkit-font-join-large">Gimkit</span><span id="gimkit-font-join-space-small"></span><span id="gimkit-font-join-small">Clone</span></h1>
+    </div>
+    <div id="1stplace">
+      <h1 id="1stplacename">e</h1>
+    </div>
+    <div id="2ndplace"></div>
+    <div id="3rdplace"></div>
+  </div>
+  <input id="roomidcopy" value="amongus">
+  <script defer src="/home.js"></script>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+  <script src='/lodash.js'></script>
+</body>
+</html>
