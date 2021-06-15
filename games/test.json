@@ -1,25 +1,64 @@
 {
-  "name": "Forest's Game",
+  "name": "Test Game",
   "version": "1.0.0",
-  "description": "Hi there bunny rabbit!",
-  "author": "ForestCam",
+  "description": "",
+  "author": "EnderKingJ",
   "questions": [
     {
-      "title": "Life? Universe? Everything??",
-      "correct-answer": "21",
+      "title": "What is 2+2?",
+      "correct-answer": "4",
       "other-answers": [
-        "20",
-        "19",
-        "DUCKS"
+        "1",
+        "2",
+        "6"
       ]
     },
     {
-      "title": "What is the derivative of y⁴",
-      "correct-answer": "3y³",
+      "title": "What is 3+2?",
+      "correct-answer": "5",
       "other-answers": [
-        "y³",
-        "4y⁵",
-        "2y²"
+        "6",
+        "1",
+        "4"
+      ]
+    },
+        {
+      "title": "What is 1*1?",
+      "correct-answer": "1",
+      "other-answers": [
+        "0.5",
+        "2",
+        "0"
+      ]
+    },
+    {
+      "title": "True or False: 6 - 2 = 4",
+      "correct-answer": "True",
+      "other-answers": [
+        "False"
+      ]
+    },
+        {
+      "title": "What is 2+4?",
+      "correct-answer": "6",
+      "other-answers": [
+        "1",
+        "2",
+        "4"
+      ]
+    },
+    {
+      "title": "This Quiz is bad right?",
+      "correct-answer": "NO",
+      "other-answers": [
+        "YES"
+      ]
+    },
+        {
+      "title": "Hello",
+      "correct-answer": "hello",
+      "other-answers": [
+        "Goodbye"
       ]
     }
   ]

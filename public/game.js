@@ -1,6 +1,7 @@
 let perquestion = 1;
 let boostquestion = 1;
 let multiplier = 1;
+let streaksaver = false;
 let totalquestions;
 let questions1 = 0;
 let totalattempted = 0;

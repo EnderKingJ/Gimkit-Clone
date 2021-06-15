@@ -13,6 +13,7 @@ beep = new Audio('/sounds/thanos.mp3');
 beep = new Audio('/sounds/lava.mp3');
 } 
 let end = new Audio('/sounds/end.mp3');
+let summer = new Audio('/sounds/summer.mp3');
 let time;
 if (!params.get('time')) {
   time = 600
@@ -63,10 +64,7 @@ function start() {
   document.getElementById('before-start-main').style.display = "none"
   document.getElementById('after-start-main').style.display = "block"
   var upgradebox = document.getElementById('upgrades')
-  var utext = document.createElement('div')
-  utext.id = "upgrade";
-  utext.innerHTML = `<b style="color:lightgreen">The Game</b> Has Started!`
-  upgradebox.appendChild(utext)
+  upgradebox.insertAdjacentHTML('afterBegin', `<div><b style="color:lightgreen">The Game</b> Has Started!</div>`)
   } else {
     alert('You need at least one player to start!')
   }
@@ -138,16 +136,30 @@ function endgame() {
   $('#after-start-main').fadeOut('fast')
   $('.after-end').fadeIn('fast')
   socket.emit('gameend', {room: roomid, standings: standingsByUsername()})
+  updateTop3()
   end.play()
+  setTimeout(function(){confetti()}, 6500)
+  let num = 4;
+  setInterval(function() {
+    num -= 1
+    document.getElementById('place'+num).style.visibility = "visible"
+  }, 2000)
+
+}
+
+function updateTop3() {
+  const podium = top3()
+  let number = 0;
+  $('#podium').html(podium.map((e) => {
+    number += 1
+    return ` <div id="place${number}" class="place${number}"><span class="username">${e.username}</span> <span class="pbalance">$${e.balance}</span></div>`
+  }).join("\n"))
 }
 
 socket.on('upgradebought', (e) => {
   console.log(`${e.user} Upgraded ${e.upgrade} to Level ${e.level}`)
   var upgradebox = document.getElementById('upgrades')
-  var utext = document.createElement('div')
-  utext.id = "upgrade";
-  utext.innerHTML = `${e.user} Upgraded <b style="color:yellow">${e.upgrade}</b> to Level ${e.level}`
-  upgradebox.appendChild(utext)
+  upgradebox.insertAdjacentHTML('afterBegin', `<div>${e.user} Upgraded <b style="color:yellow">${e.upgrade}</b> to Level ${e.level}</div>`)
 })
 
 function totalMoney() {
@@ -163,16 +175,26 @@ function standingsByUsername() {
   let byUsername = {}
   standings().forEach((s) => {
     placement += 1
-    const [username, balance] = s;
-    byUsername[username] = {
+    byUsername[s.username] = {
       placement: placement
     }
   })
   return byUsername;
 }
 
+function top3() {
+  return standings().slice(0, 3)
+}
+
 function standings() {
-  return _.reverse(_.sortBy(Object.entries(userBalances), ['balance']));
+  const tmp = []
+  for (const [username, balance] of Object.entries(userBalances)) {
+     tmp[tmp.length] = {
+       username: username,
+       balance: balance,
+     }
+  }
+  return _.reverse(_.sortBy(tmp, ['balance']));
 }
 
 let place = 0;
@@ -182,13 +204,12 @@ function updateLeaderBoard() {
    document.getElementById('leaders').remove()
   }
   $('#leaderboard').html("<ol id='leaders'>" + standings().map((e) => {
-     const [username, balance] = e;
-     return ` <li> ${username}: $${balance}</li>`
+     return ` <li> ${e.username}: $${e.balance}</li>`
   }).join("\n") + "</ol>")
 }
 
 socket.on('balance', (e) => {
-  userBalances[e.username] = (userBalances[e.username]) + e.delta;
+  userBalances[e.username] = (userBalances[e.username] || 0) + e.delta;
   console.log("userBalances", userBalances)
   console.log("total", totalMoney())
   $('#total-money').text('$'+totalMoney())
@@ -202,3 +223,13 @@ $('#roomid').click(function() {
 })
 
 document.getElementById('roomidcopy').value = 'https://'+document.location.host+"/join?id="+roomid
+
+socket.on('summersong', (e) => {
+  var upgradebox = document.getElementById('upgrades')
+  upgradebox.insertAdjacentHTML('afterBegin', `<div><b style="color:orange">${e} is Ready for Summer!</b></div>`)
+  beep.muted = true;
+  summer.play();
+  summer.addEventListener("ended", function(){
+    beep.muted = false;
+});
+})

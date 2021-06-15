@@ -996,3 +996,282 @@ $('button#perquestionupgrade2').click(function() {
     })
   } 
   }})
+
+      $('button#insuranceupgrade1').click(function() {
+  if(insurance<1) {
+  if(balance>=0) {
+  balance = balance - 0
+  socket.emit('balance', {room: localStorage.getItem('id'), balance: -0, username: localStorage.getItem('name')})
+  $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+  })
+  } else {
+    alert('Not Enough Money!')
+  }} else {
+    promp = confirm('Already Bought! Continue to Questions?')
+    if(promp==true) {
+    $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+    })
+  } 
+  }})
+
+  $('button#insuranceupgrade3').click(function() {
+  if(insurance>0.8) {
+  if(balance>=300) {
+  balance = balance - 300
+  socket.emit('balance', {room: localStorage.getItem('id'), balance: -300, username: localStorage.getItem('name')})
+  insuranceupgrade(3)
+  $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+  })
+  } else {
+    alert('Not Enough Money!')
+  }} else {
+    promp = confirm('Already Bought! Continue to Questions?')
+    if(promp==true) {
+    $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+    })
+  } 
+  }})
+
+  $('button#insuranceupgrade4').click(function() {
+  if(insurance>0.7) {
+  if(balance>=2500) {
+  balance = balance - 2500
+  socket.emit('balance', {room: localStorage.getItem('id'), balance: -2500, username: localStorage.getItem('name')})
+  insuranceupgrade(4)
+  $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+  })
+  } else {
+    alert('Not Enough Money!')
+  }} else {
+    promp = confirm('Already Bought! Continue to Questions?')
+    if(promp==true) {
+    $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+    })
+  } 
+  }})
+
+  $('button#insuranceupgrade5').click(function() {
+  if(insurance>0.5) {
+  if(balance>=50000) {
+  balance = balance - 50000
+  socket.emit('balance', {room: localStorage.getItem('id'), balance: -50000, username: localStorage.getItem('name')})
+  insuranceupgrade(5)
+  $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+  })
+  } else {
+    alert('Not Enough Money!')
+  }} else {
+    promp = confirm('Already Bought! Continue to Questions?')
+    if(promp==true) {
+    $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+    })
+  } 
+  }})
+
+  $('button#insuranceupgrade6').click(function() {
+  if(insurance>0.4) {
+  if(balance>=2500000) {
+  balance = balance - 2500000
+  socket.emit('balance', {room: localStorage.getItem('id'), balance: -2500000, username: localStorage.getItem('name')})
+  insuranceupgrade(6)
+  $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+  })
+  } else {
+    alert('Not Enough Money!')
+  }} else {
+    promp = confirm('Already Bought! Continue to Questions?')
+    if(promp==true) {
+    $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+    })
+  } 
+  }})
+
+  $('button#insuranceupgrade7').click(function() {
+  if(insurance>0.25) {
+  if(balance>=50000000) {
+  balance = balance - 50000000
+  socket.emit('balance', {room: localStorage.getItem('id'), balance: -50000000, username: localStorage.getItem('name')})
+  insuranceupgrade(7)
+  $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+  })
+  } else {
+    alert('Not Enough Money!')
+  }} else {
+    promp = confirm('Already Bought! Continue to Questions?')
+    if(promp==true) {
+    $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+    })
+  } 
+  }})
+
+  $('button#insuranceupgrade8').click(function() {
+  if(insurance>0.1) {
+  if(balance>=1000000000) {
+  balance = balance - 1000000000
+  socket.emit('balance', {room: localStorage.getItem('id'), balance: -1000000000, username: localStorage.getItem('name')})
+  insuranceupgrade(8)
+  $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+  })
+  } else {
+    alert('Not Enough Money!')
+  }} else {
+    promp = confirm('Already Bought! Continue to Questions?')
+    if(promp==true) {
+    $("#money").fadeOut(function() {
+    $(this).text('$'+balance)
+    }).fadeIn();
+  $('.button-frame-01').fadeIn('fast')
+  $('.shopp').fadeOut('fast')
+    $('div.correct').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+    $('#money').fadeIn('fast')
+    $( "#q"+questions ).fadeIn( "slow" );  
+    })
+  } 
+  }})

@@ -90,18 +90,24 @@ $('button.shobutton').click(function() {
   $('div.correct').fadeOut('fast', function() {
       $('#money').fadeIn('fast')
         $('#exit-shop').show();
+        $('#powerup-shop-open').show();
     $( ".shop" ).fadeIn( "slow" );    
   })
   $('div.incorrect').fadeOut('fast', function() {
       $('#money').fadeIn('fast')
         $('#exit-shop').show();
+        $('#powerup-shop-open').show();
     $( ".shop" ).fadeIn( "slow" );    
   })
 })
 
 $('button.ibutton').click(function() {
     $('#money').fadeOut('fast')
-    localStorage.setItem('streak', 0)
+    if (streaksaver==true) {
+      
+    } else {
+      localStorage.setItem('streak', 0)
+    }
     streak = localStorage.getItem('streak')
     questionwrong()
     localStorage.setItem('money', balance)
@@ -166,7 +172,6 @@ foo.play();
 
 $('#exit-shop').click(function() {
   $('.button-frame-01').fadeIn('fast')
-  $('#exit-shop').hide();
   $('.shopp').hide();
     $('div.correct').fadeOut('fast', function() {
     $('#money').fadeIn('fast')
@@ -176,6 +181,24 @@ $('#exit-shop').click(function() {
     $('#money').fadeIn('fast')
     $( "#q"+questions ).fadeIn( "slow" );  
     })
+    $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
+})
+
+$('#powerup-shop-open').click(function() {
+  $('.button-frame-01').fadeOut('fast')
+  $('div.correct').fadeOut('fast', function() {
+      $('#money').fadeIn('fast')
+        $('#exit-shop').show();
+        $('.shop').fadeOut('fast')
+    $( ".powerups" ).fadeIn( "slow" );    
+  })
+  $('div.incorrect').fadeOut('fast', function() {
+      $('#money').fadeIn('fast')
+        $('#exit-shop').show();
+    $('.shop').fadeOut('fast')
+    $( ".powerups" ).fadeIn( "slow" );    
+  })
 })
 
   console.log('Content Loaded!')

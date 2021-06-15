@@ -11,6 +11,9 @@ let started = '{"started":[]}'
 let ended = '{"ended":[]}'
 
 io.on('connection', (socket, req, res) => {
+  socket.on('summersong', (e) => {
+    socket.to(e.room).emit('summersong', e.name)
+  })
   socket.on('upgrade', (e) => {
     console.log(`Room: ${e.room}, Upgrade: ${e.upgrade}, User: ${e.user}, Level: ${e.level}`)
     socket.to(e.room).emit('upgradebought', {user: e.user, upgrade: e.upgrade, level: e.level})
@@ -87,7 +90,7 @@ io.on('connection', (socket, req, res) => {
 
   socket.on('gameend', (e) => {
     console.log('game ended: ', e.room)
-    console.log(e.standings)
+    console.log('game ended standings', e.standings)
     socket.to(e.room).emit('gameend', e.standings)
     var obj = JSON.parse(ended);
     obj['ended'].push([e.room]);

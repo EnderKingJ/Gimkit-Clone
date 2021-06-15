@@ -34,11 +34,7 @@
     <h1 id="clap-count">0 Claps</h1>
     <h1 id="title"><span id="gimkit-font-join-large">Gimkit</span><span id="gimkit-font-join-space-small"></span><span id="gimkit-font-join-small">Clone</span></h1>
     </div>
-    <div id="1stplace">
-      <h1 id="1stplacename">e</h1>
-    </div>
-    <div id="2ndplace"></div>
-    <div id="3rdplace"></div>
+    <div id="podium" style="text-align: center;padding-top:100px;"></div>
   </div>
   <input id="roomidcopy" value="amongus">
   <script defer src="/home.js"></script>
@@ -46,5 +42,9 @@
   <script src="/socket.io/socket.io.js"></script>
   <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
   <script src='/lodash.js'></script>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.4.0/dist/confetti.browser.min.js"></script>
+  <script type="module">
+  import confetti from 'https://cdn.skypack.dev/canvas-confetti';
+  </script>
 </body>
 </html>

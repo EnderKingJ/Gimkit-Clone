@@ -10,6 +10,7 @@
   <div class="navbar">
     <h1 id="money">$0</h1>
     <img src="exit-shop.png" id="exit-shop" width="30" height="39"/>
+    <img src="powerups.png" id="powerup-shop-open" width="30" height="33"/>
   </div>
   <div class="correct" style="display: none;">
   <h1 id="after-question-gain"><b>$0</b></h1>
@@ -88,6 +89,11 @@
     <button class="shopbutton" id="insuranceupgrade8">Level 8 (90%) - $1000000000</button>
   </div>
 
+  <div class="powerups shopp" id="powerups">
+    <button class="shopbutton" style="background: orange" onclick="powerup('summersong', 200)">Summer Song - $200</button>
+    <button class="shopbutton" style="background: #ffeb3b" onclick="powerup('streaksaver', 500)">Streak Saver (90s) - $500</button>
+  </div>
+
   <div class="after-end">
   <div class="navbar" style="padding-top: 0;">
     <h1 id="title"><span id="gimkit-font-join-large">Gimkit</span><span id="gimkit-font-join-space-small"></span><span id="gimkit-font-join-small">Clone</span></h1>
@@ -115,6 +121,7 @@
   <script defer src="/main.js"></script>
   <script defer src="/game.js"></script>
   <script defer src="/shop.js"></script>
+  <script defer src="/powerup.js"></script>
   <script src='/lodash.js'></script>
 </body>
 </html>

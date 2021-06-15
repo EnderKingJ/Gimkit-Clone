@@ -43,6 +43,15 @@ body, html {
  -webkit-filter: brightness(0) invert(1);
  filter: brightness(0) invert(1); 
 }
+
+#powerup-shop-open {
+  float: right;
+  margin-right: 15px;
+  display: none;
+ -webkit-filter: brightness(0) invert(1);
+ filter: brightness(0) invert(1); 
+}
+
 .shopbutton:hover {
   background: #5997e9;
 }
@@ -411,6 +420,18 @@ svg {
 }
 
 #multipliershop {
+  padding-top: 50px;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  display: none;
+  z-index: 999999;
+  position: sticky;
+  top: 50px;
+  background: lightcoral;
+}
+
+.powerups {
   padding-top: 50px;
   text-align: center;
   height: 100vh;
