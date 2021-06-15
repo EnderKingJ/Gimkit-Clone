@@ -21,6 +21,18 @@ body, html {
   transition: background-color 1000ms linear;
   overflow: hidden;
 }
+.e1 {
+  background: #21991A;
+}
+.e2 {
+  background: #1068D1;
+}
+.e3 {
+  background: #19B07B;
+}
+.e4 {
+  background: #6024D8;
+}
 .shopbutton {
   background: #5568a7;
   display: inline-block;
@@ -449,7 +461,6 @@ svg {
   color: #ffffff;
   margin-right: 5px;
   border: 3px inset #bbbbbb;
-  background: #aaaaaa;
   width: 45%;
   height: 250px;
   margin-top: 5px;
