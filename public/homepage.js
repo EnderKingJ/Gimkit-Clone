@@ -68,10 +68,19 @@ $('#join').click(function() {
 
 let song;
 let time;
+let quiz;
 
 $('#host').click(function() {
     $('#indexdiv').fadeOut('slow', function() {
     $('#hostdiv').fadeIn('slow')
+      $('#quizf').fadeIn('slow')
+        $('#quiz').focus()
+        $('#quizf').submit(function(e) {
+          e.preventDefault()
+          quiz = $('#quiz').val()
+          $('#quizf').fadeOut('slow', function() {
+          $('#songf').fadeIn('slow')
+        })})
     document.getElementById('song').focus();
     $('#songf').submit(function(event) {
       event.preventDefault()
@@ -83,10 +92,17 @@ $('#host').click(function() {
           e.preventDefault()
           time = $('#time').val()
           $('#hostdiv').fadeOut('slow', function() {
-          location.href = "/host?song="+song+"&time="+time
+          location.href = "/host?song="+song+"&time="+time+"&game="+quiz
           })
         })
       })
     })
 })
 })
+
+socket.on('quizzes', (quizzes) => {
+  document.getElementById('quiz').innerHTML = quizzes.map((q) => {
+      q.name = q.name.replace('.json', '')
+      return `<option value="${q.name}">${q.name[0].toUpperCase() + q.name.substring(1)}`
+  }).join("\n") + "</option>"})
+

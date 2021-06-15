@@ -171,6 +171,8 @@ foo.play();
 */
 
 $('#exit-shop').click(function() {
+    $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
   $('.button-frame-01').fadeIn('fast')
   $('.shopp').hide();
     $('div.correct').fadeOut('fast', function() {
@@ -181,8 +183,6 @@ $('#exit-shop').click(function() {
     $('#money').fadeIn('fast')
     $( "#q"+questions ).fadeIn( "slow" );  
     })
-    $('#exit-shop').hide();
-    $('#powerup-shop-open').hide();
 })
 
 $('#powerup-shop-open').click(function() {

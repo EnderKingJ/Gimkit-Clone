@@ -5,6 +5,7 @@ const _ = require('lodash')
 const fs = require("fs");
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
+let gamename = 'test';
 
 let rooms = '{"rooms":[]}'
 let started = '{"started":[]}'
@@ -87,6 +88,10 @@ io.on('connection', (socket, req, res) => {
 
     socket.emit('questions', questions)
 
+  const quizzes = showQuizzes()
+  let show = getQuizzes(quizzes)
+
+    socket.emit('quizzes', show)
 
   socket.on('gameend', (e) => {
     console.log('game ended: ', e.room)
@@ -107,7 +112,12 @@ io.on('connection', (socket, req, res) => {
 });
 
 app.get('/host', function(req, res) {
+  if (req.query.game) {
+  gamename = req.query.game
   res.sendFile('host.html', {root: './public'})
+  } else {
+    res.send('Please Specify a Game')
+  }
 })
 
 app.get('/game', function(req, res) {
@@ -132,7 +142,7 @@ app.get('/unauthorized/:reason', function(req, res) {
 
 function getGameData(name) {
   name = 'test'
-  let file = `games/${name}.json`;
+  let file = `games/${gamename}.json`;
   const data = fs.readFileSync(file, {encoding:'utf8', flag:'r'});
   return JSON.parse(data)
 }
@@ -147,6 +157,18 @@ function getQuestions(data) {
       answers: _.shuffle([...q["other-answers"], q["correct-answer"]]),
       correctAnswer: q["correct-answer"],
       qnumber: Object.keys(data.questions).length
+    }
+  })
+}
+
+function showQuizzes() {
+  return fs.readdirSync('games');
+}
+
+function getQuizzes(e) {
+  return e.map((e) => {
+    return {
+      name: e
     }
   })
 }

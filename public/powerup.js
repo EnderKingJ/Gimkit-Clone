@@ -3,7 +3,10 @@ function powerup(powerup, cost) {
   if(balance>=cost) {
   balance -= cost
   socket.emit('balance', {room: localStorage.getItem('id'), balance: -cost, username: localStorage.getItem('name')})
+  socket.emit('summersong', {room: localStorage.getItem('id'), name: localStorage.getItem('name')})
   alert('Purchase Successful!')
+      $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
     $("#money").fadeOut(function() {
     $(this).text('$'+balance)
     }).fadeIn();
@@ -17,7 +20,6 @@ function powerup(powerup, cost) {
     $('#money').fadeIn('fast')
     $( "#q"+questions ).fadeIn( "slow" );  
   })
-  socket.emit('summersong', {room: localStorage.getItem('id'), name: localStorage.getItem('name')})
   } else {
     alert('Not Enough Money!')
   }
@@ -40,6 +42,8 @@ function powerup(powerup, cost) {
     $( "#q"+questions ).fadeIn( "slow" );  
   })
   alert('Purchase Successful!')
+      $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
   setTimeout(function() {streaksaver = false}, 90000)
   } else {
     alert('Not Enough Money!')

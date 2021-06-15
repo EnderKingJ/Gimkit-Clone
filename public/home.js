@@ -20,6 +20,7 @@ if (!params.get('time')) {
 } else {
   time = params.get('time')
 }
+let kicked = 0;
 let clapcount = 0;
 let userBalances = {};
 let roomid;
@@ -53,7 +54,7 @@ setTimeout(() => { beep.pause(); }, time_in_milisec);
 }
 
 function usercount() {
-  return Object.keys(userBalances).length;
+  return Object.keys(userBalances).length - kicked;
 }
 
 function start() {
@@ -121,6 +122,8 @@ socket.on('clap', function() {
 function remove(el) {
   element = el
   element.remove();
+  kicked += 1;
+  $('#usercount').text(usercount()+' Players')
   socket.emit('kickuser', {user: element.textContent, room: roomid})
 }
 

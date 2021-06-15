@@ -19,6 +19,8 @@ socket.emit('join', {username: localStorage.getItem('name'), room: localStorage.
 function questionupgrade(level) {
 localStorage.setItem('streak', 0)
 socket.emit('upgrade', {user: localStorage.getItem('name'), room: localStorage.getItem('id'), upgrade: 'Streak Bonus', level: level})
+    $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
 if (level ==  2) {
   boostquestion = 3
 } else if (level == 3) {
@@ -39,6 +41,8 @@ if (level ==  2) {
 function multiplierupgrade(level) {
 localStorage.setItem('streak', 0)
 socket.emit('upgrade', {user: localStorage.getItem('name'), room: localStorage.getItem('id'), upgrade: 'Multiplier', level: level})
+    $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
 if (level ==  2) {
   multiplier = 1.5
 } else if (level == 3) {
@@ -59,6 +63,8 @@ if (level ==  2) {
 function insuranceupgrade(level) {
 localStorage.setItem('streak', 0)
 socket.emit('upgrade', {user: localStorage.getItem('name'), room: localStorage.getItem('id'), upgrade: 'Insurance', level: level})
+    $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
 if (level ==  2) {
   insurance = 0.9
 } else if (level == 3) {
@@ -79,6 +85,8 @@ if (level ==  2) {
 function boostupgrade(level) {
 localStorage.setItem('streak', 0)
 socket.emit('upgrade', {user: localStorage.getItem('name'), room: localStorage.getItem('id'), upgrade: 'Money Per Question', level: level})
+    $('#exit-shop').hide();
+    $('#powerup-shop-open').hide();
 if (level ==  2) {
   perquestion = 5
 } else if (level == 3) {
