@@ -282,7 +282,7 @@ $('button#streakbonusupgrade2').click(function() {
   if(balance>=1500000) {
   balance = balance - 1500000
   socket.emit('balance', {room: localStorage.getItem('id'), balance: -1500000, username: localStorage.getItem('name')})
-  questionupgrade(6)
+  questionupgrade(8)
   $("#money").fadeOut(function() {
     $(this).text('$'+balance)
     }).fadeIn();

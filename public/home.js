@@ -155,7 +155,7 @@ function updateTop3() {
   let number = 0;
   $('#podium').html(podium.map((e) => {
     number += 1
-    return ` <div id="place${number}" class="place${number}"><span class="username">${e.username}</span> <span class="pbalance">$${e.balance}</span></div>`
+    return ` <div id="place${number}" class="place${number}"><span class="username">${e.username}</span> <span class="pbalance">$${addCommas(e.balance)}</span></div>`
   }).join("\n"))
 }
 
@@ -207,7 +207,7 @@ function updateLeaderBoard() {
    document.getElementById('leaders').remove()
   }
   $('#leaderboard').html("<ol id='leaders'>" + standings().map((e) => {
-     return ` <li> ${e.username}: $${e.balance}</li>`
+     return ` <li> ${e.username}: $${addCommas(e.balance)}</li>`
   }).join("\n") + "</ol>")
 }
 
@@ -215,7 +215,7 @@ socket.on('balance', (e) => {
   userBalances[e.username] = (userBalances[e.username] || 0) + e.delta;
   console.log("userBalances", userBalances)
   console.log("total", totalMoney())
-  $('#total-money').text('$'+totalMoney())
+  $('#total-money').text('$'+addCommas(totalMoney()))
   updateLeaderBoard()
 })
 
@@ -236,3 +236,7 @@ socket.on('summersong', (e) => {
     beep.muted = false;
 });
 })
+
+function addCommas(amount) {
+  return amount.toFixed(0).replace(/\d(?=(\d{3})+\.)/g, "$&,")
+}

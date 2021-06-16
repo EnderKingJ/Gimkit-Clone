@@ -152,12 +152,24 @@ function showend() {
   document.getElementsByClassName('correct')[0].style.display = "block"
 }
 
+const times = x => f => {
+  if (x > 0) {
+    f()
+    times (x - 1) (f)
+  }
+}
+
 document.getElementsByClassName('clap')[0].addEventListener('click', function() {
+  if (clapp==true) {
+    claps += 10
+  times (10) (() => {socket.emit('clap', {room: localStorage.getItem('id')})})
+  } else {
   claps += 1
+  socket.emit('clap', {room: localStorage.getItem('id')})
+  }
 var foo = new Audio("/sounds/clap.wav", 100, true);
 foo.play();
-  document.getElementById('claps').textContent = 'Clap - '+claps
-  socket.emit('clap', {room: localStorage.getItem('id')})
+document.getElementById('claps').textContent = 'Clap - '+claps
 })
 
 /*cbutton.onclick = function() {

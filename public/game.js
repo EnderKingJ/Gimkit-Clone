@@ -1,4 +1,5 @@
 let perquestion = 1;
+let clapp = false;
 let boostquestion = 1;
 let multiplier = 1;
 let streaksaver = false;

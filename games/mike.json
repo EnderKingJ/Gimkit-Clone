@@ -1,0 +1,2267 @@
+{
+  "name": "Mike's Game",
+  "version": "1.0.0",
+  "description": "Auto generated math questions",
+  "author": "mbryzek",
+  "questions": [
+    {
+      "title": "What is 60 - 92",
+      "correct-answer": -32,
+      "other-answers": [
+        40,
+        907,
+        42
+      ]
+    },
+    {
+      "title": "What is 50 - 18",
+      "correct-answer": 32,
+      "other-answers": [
+        73,
+        26,
+        21
+      ]
+    },
+    {
+      "title": "What is 64 / 16?",
+      "correct-answer": 4,
+      "other-answers": [
+        1,
+        3,
+        6
+      ]
+    },
+    {
+      "title": "What is 1 + 10",
+      "correct-answer": 11,
+      "other-answers": [
+        94,
+        40,
+        33
+      ]
+    },
+    {
+      "title": "What is 104 / 13?",
+      "correct-answer": 8,
+      "other-answers": [
+        5,
+        3,
+        7
+      ]
+    },
+    {
+      "title": "What is 24 - 82",
+      "correct-answer": -58,
+      "other-answers": [
+        22,
+        922,
+        753
+      ]
+    },
+    {
+      "title": "What is 34 - 59",
+      "correct-answer": -25,
+      "other-answers": [
+        341,
+        699,
+        445
+      ]
+    },
+    {
+      "title": "What is 12 / 2?",
+      "correct-answer": 6,
+      "other-answers": [
+        2,
+        3,
+        1
+      ]
+    },
+    {
+      "title": "What is 41 + 66",
+      "correct-answer": 107,
+      "other-answers": [
+        764,
+        999,
+        505
+      ]
+    },
+    {
+      "title": "What is 33 + 5",
+      "correct-answer": 38,
+      "other-answers": [
+        77,
+        15,
+        66
+      ]
+    },
+    {
+      "title": "What is 33 + 97",
+      "correct-answer": 130,
+      "other-answers": [
+        896,
+        522,
+        227
+      ]
+    },
+    {
+      "title": "What is 75 + 52",
+      "correct-answer": 127,
+      "other-answers": [
+        675,
+        848,
+        776
+      ]
+    },
+    {
+      "title": "What is 6 * 83",
+      "correct-answer": 498,
+      "other-answers": [
+        185,
+        316,
+        340
+      ]
+    },
+    {
+      "title": "What is 90 + 17",
+      "correct-answer": 107,
+      "other-answers": [
+        991,
+        380,
+        344
+      ]
+    },
+    {
+      "title": "What is 90 - 56",
+      "correct-answer": 34,
+      "other-answers": [
+        99,
+        32,
+        42
+      ]
+    },
+    {
+      "title": "What is 96 + 47",
+      "correct-answer": 143,
+      "other-answers": [
+        134,
+        728,
+        476
+      ]
+    },
+    {
+      "title": "What is 7 * 3",
+      "correct-answer": 21,
+      "other-answers": [
+        16,
+        64,
+        77
+      ]
+    },
+    {
+      "title": "What is 425 / 85?",
+      "correct-answer": 5,
+      "other-answers": [
+        3,
+        1,
+        8
+      ]
+    },
+    {
+      "title": "What is 1 + 65",
+      "correct-answer": 66,
+      "other-answers": [
+        83,
+        59,
+        2
+      ]
+    },
+    {
+      "title": "What is 2 * 60",
+      "correct-answer": 120,
+      "other-answers": [
+        473,
+        587,
+        929
+      ]
+    },
+    {
+      "title": "What is 58 + 85",
+      "correct-answer": 143,
+      "other-answers": [
+        622,
+        118,
+        247
+      ]
+    },
+    {
+      "title": "What is 192 / 48?",
+      "correct-answer": 4,
+      "other-answers": [
+        5,
+        1,
+        6
+      ]
+    },
+    {
+      "title": "What is 99 / 99?",
+      "correct-answer": 1,
+      "other-answers": [
+        6,
+        4,
+        9
+      ]
+    },
+    {
+      "title": "What is 25 + 76",
+      "correct-answer": 101,
+      "other-answers": [
+        112,
+        843,
+        222
+      ]
+    },
+    {
+      "title": "What is 9 * 83",
+      "correct-answer": 747,
+      "other-answers": [
+        102,
+        233,
+        965
+      ]
+    },
+    {
+      "title": "What is 9 * 72",
+      "correct-answer": 648,
+      "other-answers": [
+        513,
+        981,
+        441
+      ]
+    },
+    {
+      "title": "What is 4 * 36",
+      "correct-answer": 144,
+      "other-answers": [
+        799,
+        767,
+        277
+      ]
+    },
+    {
+      "title": "What is 252 / 63?",
+      "correct-answer": 4,
+      "other-answers": [
+        7,
+        9,
+        3
+      ]
+    },
+    {
+      "title": "What is 14 / 2?",
+      "correct-answer": 7,
+      "other-answers": [
+        8,
+        4,
+        5
+      ]
+    },
+    {
+      "title": "What is 88 / 88?",
+      "correct-answer": 1,
+      "other-answers": [
+        6,
+        5,
+        4
+      ]
+    },
+    {
+      "title": "What is 56 + 29",
+      "correct-answer": 85,
+      "other-answers": [
+        75,
+        4,
+        78
+      ]
+    },
+    {
+      "title": "What is 2 * 96",
+      "correct-answer": 192,
+      "other-answers": [
+        135,
+        120,
+        902
+      ]
+    },
+    {
+      "title": "What is 4 * 83",
+      "correct-answer": 332,
+      "other-answers": [
+        962,
+        334,
+        623
+      ]
+    },
+    {
+      "title": "What is 66 + 1",
+      "correct-answer": 67,
+      "other-answers": [
+        94,
+        65,
+        55
+      ]
+    },
+    {
+      "title": "What is 6 * 41",
+      "correct-answer": 246,
+      "other-answers": [
+        54,
+        493,
+        49
+      ]
+    },
+    {
+      "title": "What is 3 * 72",
+      "correct-answer": 216,
+      "other-answers": [
+        901,
+        356,
+        578
+      ]
+    },
+    {
+      "title": "What is 585 / 65?",
+      "correct-answer": 9,
+      "other-answers": [
+        3,
+        2,
+        7
+      ]
+    },
+    {
+      "title": "What is 59 - 16",
+      "correct-answer": 43,
+      "other-answers": [
+        70,
+        2,
+        41
+      ]
+    },
+    {
+      "title": "What is 99 - 52",
+      "correct-answer": 47,
+      "other-answers": [
+        54,
+        30,
+        93
+      ]
+    },
+    {
+      "title": "What is 9 + 90",
+      "correct-answer": 99,
+      "other-answers": [
+        82,
+        18,
+        38
+      ]
+    },
+    {
+      "title": "What is 68 - 58",
+      "correct-answer": 10,
+      "other-answers": [
+        91,
+        80,
+        56
+      ]
+    },
+    {
+      "title": "What is 9 + 55",
+      "correct-answer": 64,
+      "other-answers": [
+        12,
+        75,
+        63
+      ]
+    },
+    {
+      "title": "What is 6 * 20",
+      "correct-answer": 120,
+      "other-answers": [
+        220,
+        428,
+        393
+      ]
+    },
+    {
+      "title": "What is 24 / 3?",
+      "correct-answer": 8,
+      "other-answers": [
+        9,
+        4,
+        3
+      ]
+    },
+    {
+      "title": "What is 48 + 58",
+      "correct-answer": 106,
+      "other-answers": [
+        435,
+        469,
+        801
+      ]
+    },
+    {
+      "title": "What is 504 / 63?",
+      "correct-answer": 8,
+      "other-answers": [
+        2,
+        6,
+        7
+      ]
+    },
+    {
+      "title": "What is 52 + 60",
+      "correct-answer": 112,
+      "other-answers": [
+        980,
+        838,
+        257
+      ]
+    },
+    {
+      "title": "What is 392 / 98?",
+      "correct-answer": 4,
+      "other-answers": [
+        6,
+        8,
+        3
+      ]
+    },
+    {
+      "title": "What is 93 - 53",
+      "correct-answer": 40,
+      "other-answers": [
+        13,
+        74,
+        5
+      ]
+    },
+    {
+      "title": "What is 3 * 8",
+      "correct-answer": 24,
+      "other-answers": [
+        63,
+        56,
+        36
+      ]
+    },
+    {
+      "title": "What is 360 / 45?",
+      "correct-answer": 8,
+      "other-answers": [
+        9,
+        7,
+        5
+      ]
+    },
+    {
+      "title": "What is 94 + 5",
+      "correct-answer": 99,
+      "other-answers": [
+        95,
+        90,
+        16
+      ]
+    },
+    {
+      "title": "What is 76 / 76?",
+      "correct-answer": 1,
+      "other-answers": [
+        9,
+        4,
+        6
+      ]
+    },
+    {
+      "title": "What is 240 / 48?",
+      "correct-answer": 5,
+      "other-answers": [
+        3,
+        9,
+        2
+      ]
+    },
+    {
+      "title": "What is 95 + 77",
+      "correct-answer": 172,
+      "other-answers": [
+        665,
+        882,
+        232
+      ]
+    },
+    {
+      "title": "What is 46 / 46?",
+      "correct-answer": 1,
+      "other-answers": [
+        6,
+        5,
+        7
+      ]
+    },
+    {
+      "title": "What is 2 + 15",
+      "correct-answer": 17,
+      "other-answers": [
+        24,
+        34,
+        78
+      ]
+    },
+    {
+      "title": "What is 576 / 64?",
+      "correct-answer": 9,
+      "other-answers": [
+        3,
+        1,
+        4
+      ]
+    },
+    {
+      "title": "What is 39 - 88",
+      "correct-answer": -49,
+      "other-answers": [
+        245,
+        649,
+        499
+      ]
+    },
+    {
+      "title": "What is 82 - 65",
+      "correct-answer": 17,
+      "other-answers": [
+        84,
+        69,
+        12
+      ]
+    },
+    {
+      "title": "What is 38 - 98",
+      "correct-answer": -60,
+      "other-answers": [
+        645,
+        522,
+        659
+      ]
+    },
+    {
+      "title": "What is 7 * 98",
+      "correct-answer": 686,
+      "other-answers": [
+        166,
+        565,
+        644
+      ]
+    },
+    {
+      "title": "What is 71 + 85",
+      "correct-answer": 156,
+      "other-answers": [
+        372,
+        648,
+        667
+      ]
+    },
+    {
+      "title": "What is 1 * 34",
+      "correct-answer": 34,
+      "other-answers": [
+        62,
+        68,
+        75
+      ]
+    },
+    {
+      "title": "What is 4 * 13",
+      "correct-answer": 52,
+      "other-answers": [
+        85,
+        90,
+        49
+      ]
+    },
+    {
+      "title": "What is 97 - 69",
+      "correct-answer": 28,
+      "other-answers": [
+        66,
+        21,
+        30
+      ]
+    },
+    {
+      "title": "What is 17 - 43",
+      "correct-answer": -26,
+      "other-answers": [
+        944,
+        941,
+        855
+      ]
+    },
+    {
+      "title": "What is 140 / 20?",
+      "correct-answer": 7,
+      "other-answers": [
+        8,
+        2,
+        3
+      ]
+    },
+    {
+      "title": "What is 2 * 27",
+      "correct-answer": 54,
+      "other-answers": [
+        73,
+        36,
+        27
+      ]
+    },
+    {
+      "title": "What is 53 - 42",
+      "correct-answer": 11,
+      "other-answers": [
+        81,
+        96,
+        86
+      ]
+    },
+    {
+      "title": "What is 29 - 64",
+      "correct-answer": -35,
+      "other-answers": [
+        76,
+        144,
+        30
+      ]
+    },
+    {
+      "title": "What is 44 + 76",
+      "correct-answer": 120,
+      "other-answers": [
+        279,
+        811,
+        981
+      ]
+    },
+    {
+      "title": "What is 63 + 95",
+      "correct-answer": 158,
+      "other-answers": [
+        494,
+        710,
+        145
+      ]
+    },
+    {
+      "title": "What is 7 + 70",
+      "correct-answer": 77,
+      "other-answers": [
+        97,
+        60,
+        59
+      ]
+    },
+    {
+      "title": "What is 78 / 78?",
+      "correct-answer": 1,
+      "other-answers": [
+        6,
+        3,
+        4
+      ]
+    },
+    {
+      "title": "What is 30 - 44",
+      "correct-answer": -14,
+      "other-answers": [
+        112,
+        346,
+        772
+      ]
+    },
+    {
+      "title": "What is 77 + 66",
+      "correct-answer": 143,
+      "other-answers": [
+        902,
+        876,
+        203
+      ]
+    },
+    {
+      "title": "What is 10 + 83",
+      "correct-answer": 93,
+      "other-answers": [
+        41,
+        98,
+        42
+      ]
+    },
+    {
+      "title": "What is 99 - 33",
+      "correct-answer": 66,
+      "other-answers": [
+        97,
+        10,
+        35
+      ]
+    },
+    {
+      "title": "What is 1 * 16",
+      "correct-answer": 16,
+      "other-answers": [
+        63,
+        7,
+        75
+      ]
+    },
+    {
+      "title": "What is 45 + 51",
+      "correct-answer": 96,
+      "other-answers": [
+        51,
+        28,
+        60
+      ]
+    },
+    {
+      "title": "What is 8 * 75",
+      "correct-answer": 600,
+      "other-answers": [
+        437,
+        478,
+        229
+      ]
+    },
+    {
+      "title": "What is 97 + 13",
+      "correct-answer": 110,
+      "other-answers": [
+        201,
+        86,
+        662
+      ]
+    },
+    {
+      "title": "What is 88 - 22",
+      "correct-answer": 66,
+      "other-answers": [
+        17,
+        39,
+        56
+      ]
+    },
+    {
+      "title": "What is 54 + 70",
+      "correct-answer": 124,
+      "other-answers": [
+        155,
+        278,
+        608
+      ]
+    },
+    {
+      "title": "What is 53 - 29",
+      "correct-answer": 24,
+      "other-answers": [
+        81,
+        21,
+        39
+      ]
+    },
+    {
+      "title": "What is 74 + 83",
+      "correct-answer": 157,
+      "other-answers": [
+        943,
+        342,
+        722
+      ]
+    },
+    {
+      "title": "What is 9 * 80",
+      "correct-answer": 720,
+      "other-answers": [
+        597,
+        719,
+        78
+      ]
+    },
+    {
+      "title": "What is 212 / 53?",
+      "correct-answer": 4,
+      "other-answers": [
+        3,
+        8,
+        2
+      ]
+    },
+    {
+      "title": "What is 66 + 10",
+      "correct-answer": 76,
+      "other-answers": [
+        6,
+        37,
+        1
+      ]
+    },
+    {
+      "title": "What is 360 / 90?",
+      "correct-answer": 4,
+      "other-answers": [
+        6,
+        2,
+        7
+      ]
+    },
+    {
+      "title": "What is 83 - 76",
+      "correct-answer": 7,
+      "other-answers": [
+        6,
+        3,
+        1
+      ]
+    },
+    {
+      "title": "What is 133 / 19?",
+      "correct-answer": 7,
+      "other-answers": [
+        4,
+        9,
+        6
+      ]
+    },
+    {
+      "title": "What is 7 - 45",
+      "correct-answer": -38,
+      "other-answers": [
+        323,
+        740,
+        111
+      ]
+    },
+    {
+      "title": "What is 170 / 34?",
+      "correct-answer": 5,
+      "other-answers": [
+        9,
+        4,
+        8
+      ]
+    },
+    {
+      "title": "What is 5 * 42",
+      "correct-answer": 210,
+      "other-answers": [
+        44,
+        783,
+        474
+      ]
+    },
+    {
+      "title": "What is 64 / 8?",
+      "correct-answer": 8,
+      "other-answers": [
+        5,
+        7,
+        9
+      ]
+    },
+    {
+      "title": "What is 39 + 9",
+      "correct-answer": 48,
+      "other-answers": [
+        22,
+        64,
+        20
+      ]
+    },
+    {
+      "title": "What is 7 * 65",
+      "correct-answer": 455,
+      "other-answers": [
+        120,
+        593,
+        727
+      ]
+    },
+    {
+      "title": "What is 477 / 53?",
+      "correct-answer": 9,
+      "other-answers": [
+        7,
+        8,
+        3
+      ]
+    },
+    {
+      "title": "What is 62 - 28",
+      "correct-answer": 34,
+      "other-answers": [
+        88,
+        49,
+        73
+      ]
+    },
+    {
+      "title": "What is 39 + 5",
+      "correct-answer": 44,
+      "other-answers": [
+        63,
+        88,
+        31
+      ]
+    },
+    {
+      "title": "What is 17 + 69",
+      "correct-answer": 86,
+      "other-answers": [
+        51,
+        30,
+        72
+      ]
+    },
+    {
+      "title": "What is 56 / 28?",
+      "correct-answer": 2,
+      "other-answers": [
+        9,
+        7,
+        4
+      ]
+    },
+    {
+      "title": "What is 44 - 67",
+      "correct-answer": -23,
+      "other-answers": [
+        542,
+        359,
+        77
+      ]
+    },
+    {
+      "title": "What is 24 + 67",
+      "correct-answer": 91,
+      "other-answers": [
+        92,
+        5,
+        81
+      ]
+    },
+    {
+      "title": "What is 6 - 88",
+      "correct-answer": -82,
+      "other-answers": [
+        838,
+        186,
+        710
+      ]
+    },
+    {
+      "title": "What is 31 - 7",
+      "correct-answer": 24,
+      "other-answers": [
+        19,
+        76,
+        1
+      ]
+    },
+    {
+      "title": "What is 72 - 9",
+      "correct-answer": 63,
+      "other-answers": [
+        43,
+        48,
+        79
+      ]
+    },
+    {
+      "title": "What is 74 - 40",
+      "correct-answer": 34,
+      "other-answers": [
+        51,
+        47,
+        15
+      ]
+    },
+    {
+      "title": "What is 20 + 20",
+      "correct-answer": 40,
+      "other-answers": [
+        67,
+        50,
+        70
+      ]
+    },
+    {
+      "title": "What is 462 / 66?",
+      "correct-answer": 7,
+      "other-answers": [
+        1,
+        9,
+        8
+      ]
+    },
+    {
+      "title": "What is 8 * 56",
+      "correct-answer": 448,
+      "other-answers": [
+        370,
+        620,
+        290
+      ]
+    },
+    {
+      "title": "What is 11 - 79",
+      "correct-answer": -68,
+      "other-answers": [
+        533,
+        404,
+        218
+      ]
+    },
+    {
+      "title": "What is 189 / 21?",
+      "correct-answer": 9,
+      "other-answers": [
+        5,
+        3,
+        1
+      ]
+    },
+    {
+      "title": "What is 32 - 34",
+      "correct-answer": -2,
+      "other-answers": [
+        81,
+        14,
+        3
+      ]
+    },
+    {
+      "title": "What is 93 + 94",
+      "correct-answer": 187,
+      "other-answers": [
+        174,
+        729,
+        499
+      ]
+    },
+    {
+      "title": "What is 40 + 70",
+      "correct-answer": 110,
+      "other-answers": [
+        784,
+        969,
+        393
+      ]
+    },
+    {
+      "title": "What is 5 * 60",
+      "correct-answer": 300,
+      "other-answers": [
+        451,
+        989,
+        743
+      ]
+    },
+    {
+      "title": "What is 73 + 95",
+      "correct-answer": 168,
+      "other-answers": [
+        914,
+        585,
+        465
+      ]
+    },
+    {
+      "title": "What is 9 * 51",
+      "correct-answer": 459,
+      "other-answers": [
+        264,
+        503,
+        313
+      ]
+    },
+    {
+      "title": "What is 3 * 47",
+      "correct-answer": 141,
+      "other-answers": [
+        289,
+        891,
+        154
+      ]
+    },
+    {
+      "title": "What is 91 - 56",
+      "correct-answer": 35,
+      "other-answers": [
+        37,
+        96,
+        59
+      ]
+    },
+    {
+      "title": "What is 61 - 35",
+      "correct-answer": 26,
+      "other-answers": [
+        77,
+        30,
+        7
+      ]
+    },
+    {
+      "title": "What is 1 * 78",
+      "correct-answer": 78,
+      "other-answers": [
+        25,
+        12,
+        59
+      ]
+    },
+    {
+      "title": "What is 2 * 53",
+      "correct-answer": 106,
+      "other-answers": [
+        939,
+        668,
+        79
+      ]
+    },
+    {
+      "title": "What is 390 / 65?",
+      "correct-answer": 6,
+      "other-answers": [
+        9,
+        2,
+        1
+      ]
+    },
+    {
+      "title": "What is 52 + 4",
+      "correct-answer": 56,
+      "other-answers": [
+        88,
+        37,
+        78
+      ]
+    },
+    {
+      "title": "What is 9 * 54",
+      "correct-answer": 486,
+      "other-answers": [
+        588,
+        678,
+        330
+      ]
+    },
+    {
+      "title": "What is 1 - 2",
+      "correct-answer": -1,
+      "other-answers": [
+        19,
+        40,
+        17
+      ]
+    },
+    {
+      "title": "What is 5 * 49",
+      "correct-answer": 245,
+      "other-answers": [
+        77,
+        665,
+        875
+      ]
+    },
+    {
+      "title": "What is 74 + 57",
+      "correct-answer": 131,
+      "other-answers": [
+        367,
+        42,
+        328
+      ]
+    },
+    {
+      "title": "What is 1 * 75",
+      "correct-answer": 75,
+      "other-answers": [
+        96,
+        85,
+        45
+      ]
+    },
+    {
+      "title": "What is 99 / 11?",
+      "correct-answer": 9,
+      "other-answers": [
+        4,
+        5,
+        7
+      ]
+    },
+    {
+      "title": "What is 8 * 6",
+      "correct-answer": 48,
+      "other-answers": [
+        85,
+        64,
+        26
+      ]
+    },
+    {
+      "title": "What is 6 * 50",
+      "correct-answer": 300,
+      "other-answers": [
+        437,
+        762,
+        74
+      ]
+    },
+    {
+      "title": "What is 95 - 41",
+      "correct-answer": 54,
+      "other-answers": [
+        33,
+        13,
+        79
+      ]
+    },
+    {
+      "title": "What is 8 * 32",
+      "correct-answer": 256,
+      "other-answers": [
+        94,
+        909,
+        81
+      ]
+    },
+    {
+      "title": "What is 5 * 59",
+      "correct-answer": 295,
+      "other-answers": [
+        190,
+        651,
+        280
+      ]
+    },
+    {
+      "title": "What is 12 / 6?",
+      "correct-answer": 2,
+      "other-answers": [
+        1,
+        4,
+        5
+      ]
+    },
+    {
+      "title": "What is 48 - 69",
+      "correct-answer": -21,
+      "other-answers": [
+        240,
+        79,
+        229
+      ]
+    },
+    {
+      "title": "What is 264 / 88?",
+      "correct-answer": 3,
+      "other-answers": [
+        1,
+        6,
+        5
+      ]
+    },
+    {
+      "title": "What is 279 / 93?",
+      "correct-answer": 3,
+      "other-answers": [
+        4,
+        5,
+        2
+      ]
+    },
+    {
+      "title": "What is 455 / 91?",
+      "correct-answer": 5,
+      "other-answers": [
+        8,
+        3,
+        7
+      ]
+    },
+    {
+      "title": "What is 47 - 92",
+      "correct-answer": -45,
+      "other-answers": [
+        934,
+        685,
+        561
+      ]
+    },
+    {
+      "title": "What is 49 - 73",
+      "correct-answer": -24,
+      "other-answers": [
+        684,
+        629,
+        830
+      ]
+    },
+    {
+      "title": "What is 279 / 31?",
+      "correct-answer": 9,
+      "other-answers": [
+        2,
+        7,
+        6
+      ]
+    },
+    {
+      "title": "What is 6 + 27",
+      "correct-answer": 33,
+      "other-answers": [
+        63,
+        8,
+        9
+      ]
+    },
+    {
+      "title": "What is 78 + 15",
+      "correct-answer": 93,
+      "other-answers": [
+        22,
+        36,
+        47
+      ]
+    },
+    {
+      "title": "What is 9 * 68",
+      "correct-answer": 612,
+      "other-answers": [
+        635,
+        454,
+        72
+      ]
+    },
+    {
+      "title": "What is 1 * 42",
+      "correct-answer": 42,
+      "other-answers": [
+        1,
+        20,
+        33
+      ]
+    },
+    {
+      "title": "What is 396 / 66?",
+      "correct-answer": 6,
+      "other-answers": [
+        4,
+        9,
+        5
+      ]
+    },
+    {
+      "title": "What is 504 / 84?",
+      "correct-answer": 6,
+      "other-answers": [
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "title": "What is 39 - 53",
+      "correct-answer": -14,
+      "other-answers": [
+        807,
+        25,
+        126
+      ]
+    },
+    {
+      "title": "What is 3 * 32",
+      "correct-answer": 96,
+      "other-answers": [
+        52,
+        44,
+        56
+      ]
+    },
+    {
+      "title": "What is 6 * 12",
+      "correct-answer": 72,
+      "other-answers": [
+        10,
+        36,
+        44
+      ]
+    },
+    {
+      "title": "What is 1 * 69",
+      "correct-answer": 69,
+      "other-answers": [
+        10,
+        31,
+        94
+      ]
+    },
+    {
+      "title": "What is 9 / 1?",
+      "correct-answer": 9,
+      "other-answers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "title": "What is 75 / 15?",
+      "correct-answer": 5,
+      "other-answers": [
+        2,
+        1,
+        7
+      ]
+    },
+    {
+      "title": "What is 28 - 36",
+      "correct-answer": -8,
+      "other-answers": [
+        74,
+        72,
+        89
+      ]
+    },
+    {
+      "title": "What is 4 * 54",
+      "correct-answer": 216,
+      "other-answers": [
+        387,
+        380,
+        184
+      ]
+    },
+    {
+      "title": "What is 34 + 62",
+      "correct-answer": 96,
+      "other-answers": [
+        83,
+        79,
+        1
+      ]
+    },
+    {
+      "title": "What is 64 - 42",
+      "correct-answer": 22,
+      "other-answers": [
+        84,
+        9,
+        64
+      ]
+    },
+    {
+      "title": "What is 498 / 83?",
+      "correct-answer": 6,
+      "other-answers": [
+        1,
+        4,
+        9
+      ]
+    },
+    {
+      "title": "What is 1 * 25",
+      "correct-answer": 25,
+      "other-answers": [
+        40,
+        47,
+        59
+      ]
+    },
+    {
+      "title": "What is 9 * 14",
+      "correct-answer": 126,
+      "other-answers": [
+        718,
+        376,
+        521
+      ]
+    },
+    {
+      "title": "What is 98 - 66",
+      "correct-answer": 32,
+      "other-answers": [
+        8,
+        75,
+        95
+      ]
+    },
+    {
+      "title": "What is 632 / 79?",
+      "correct-answer": 8,
+      "other-answers": [
+        6,
+        9,
+        4
+      ]
+    },
+    {
+      "title": "What is 9 * 41",
+      "correct-answer": 369,
+      "other-answers": [
+        136,
+        992,
+        266
+      ]
+    },
+    {
+      "title": "What is 46 - 54",
+      "correct-answer": -8,
+      "other-answers": [
+        86,
+        96,
+        5
+      ]
+    },
+    {
+      "title": "What is 496 / 62?",
+      "correct-answer": 8,
+      "other-answers": [
+        3,
+        2,
+        1
+      ]
+    },
+    {
+      "title": "What is 18 - 1",
+      "correct-answer": 17,
+      "other-answers": [
+        65,
+        74,
+        30
+      ]
+    },
+    {
+      "title": "What is 14 + 42",
+      "correct-answer": 56,
+      "other-answers": [
+        80,
+        40,
+        53
+      ]
+    },
+    {
+      "title": "What is 64 - 43",
+      "correct-answer": 21,
+      "other-answers": [
+        92,
+        6,
+        87
+      ]
+    },
+    {
+      "title": "What is 83 + 56",
+      "correct-answer": 139,
+      "other-answers": [
+        131,
+        247,
+        350
+      ]
+    },
+    {
+      "title": "What is 72 / 8?",
+      "correct-answer": 9,
+      "other-answers": [
+        7,
+        4,
+        8
+      ]
+    },
+    {
+      "title": "What is 96 + 8",
+      "correct-answer": 104,
+      "other-answers": [
+        658,
+        353,
+        823
+      ]
+    },
+    {
+      "title": "What is 54 + 86",
+      "correct-answer": 140,
+      "other-answers": [
+        511,
+        923,
+        327
+      ]
+    },
+    {
+      "title": "What is 7 * 84",
+      "correct-answer": 588,
+      "other-answers": [
+        969,
+        979,
+        780
+      ]
+    },
+    {
+      "title": "What is 498 / 83?",
+      "correct-answer": 6,
+      "other-answers": [
+        8,
+        3,
+        5
+      ]
+    },
+    {
+      "title": "What is 26 / 13?",
+      "correct-answer": 2,
+      "other-answers": [
+        7,
+        5,
+        9
+      ]
+    },
+    {
+      "title": "What is 14 - 60",
+      "correct-answer": -46,
+      "other-answers": [
+        411,
+        985,
+        145
+      ]
+    },
+    {
+      "title": "What is 165 / 55?",
+      "correct-answer": 3,
+      "other-answers": [
+        5,
+        4,
+        7
+      ]
+    },
+    {
+      "title": "What is 6 * 78",
+      "correct-answer": 468,
+      "other-answers": [
+        376,
+        708,
+        50
+      ]
+    },
+    {
+      "title": "What is 486 / 81?",
+      "correct-answer": 6,
+      "other-answers": [
+        2,
+        1,
+        8
+      ]
+    },
+    {
+      "title": "What is 90 - 19",
+      "correct-answer": 71,
+      "other-answers": [
+        63,
+        93,
+        54
+      ]
+    },
+    {
+      "title": "What is 2 * 68",
+      "correct-answer": 136,
+      "other-answers": [
+        925,
+        860,
+        916
+      ]
+    },
+    {
+      "title": "What is 22 + 15",
+      "correct-answer": 37,
+      "other-answers": [
+        24,
+        32,
+        44
+      ]
+    },
+    {
+      "title": "What is 5 - 82",
+      "correct-answer": -77,
+      "other-answers": [
+        490,
+        389,
+        60
+      ]
+    },
+    {
+      "title": "What is 630 / 90?",
+      "correct-answer": 7,
+      "other-answers": [
+        9,
+        5,
+        2
+      ]
+    },
+    {
+      "title": "What is 6 / 6?",
+      "correct-answer": 1,
+      "other-answers": [
+        8,
+        9,
+        5
+      ]
+    },
+    {
+      "title": "What is 7 * 77",
+      "correct-answer": 539,
+      "other-answers": [
+        320,
+        755,
+        773
+      ]
+    },
+    {
+      "title": "What is 49 + 99",
+      "correct-answer": 148,
+      "other-answers": [
+        397,
+        910,
+        958
+      ]
+    },
+    {
+      "title": "What is 38 + 7",
+      "correct-answer": 45,
+      "other-answers": [
+        42,
+        74,
+        72
+      ]
+    },
+    {
+      "title": "What is 26 - 80",
+      "correct-answer": -54,
+      "other-answers": [
+        709,
+        806,
+        735
+      ]
+    },
+    {
+      "title": "What is 308 / 77?",
+      "correct-answer": 4,
+      "other-answers": [
+        3,
+        2,
+        6
+      ]
+    },
+    {
+      "title": "What is 21 + 81",
+      "correct-answer": 102,
+      "other-answers": [
+        104,
+        415,
+        179
+      ]
+    },
+    {
+      "title": "What is 2 * 77",
+      "correct-answer": 154,
+      "other-answers": [
+        483,
+        135,
+        696
+      ]
+    },
+    {
+      "title": "What is 62 / 62?",
+      "correct-answer": 1,
+      "other-answers": [
+        7,
+        4,
+        6
+      ]
+    },
+    {
+      "title": "What is 43 - 62",
+      "correct-answer": -19,
+      "other-answers": [
+        292,
+        169,
+        714
+      ]
+    },
+    {
+      "title": "What is 4 * 6",
+      "correct-answer": 24,
+      "other-answers": [
+        62,
+        9,
+        32
+      ]
+    },
+    {
+      "title": "What is 165 / 33?",
+      "correct-answer": 5,
+      "other-answers": [
+        6,
+        2,
+        3
+      ]
+    },
+    {
+      "title": "What is 87 + 30",
+      "correct-answer": 117,
+      "other-answers": [
+        664,
+        110,
+        691
+      ]
+    },
+    {
+      "title": "What is 58 + 11",
+      "correct-answer": 69,
+      "other-answers": [
+        73,
+        26,
+        89
+      ]
+    },
+    {
+      "title": "What is 68 + 37",
+      "correct-answer": 105,
+      "other-answers": [
+        458,
+        400,
+        868
+      ]
+    },
+    {
+      "title": "What is 9 * 21",
+      "correct-answer": 189,
+      "other-answers": [
+        420,
+        823,
+        252
+      ]
+    },
+    {
+      "title": "What is 36 + 71",
+      "correct-answer": 107,
+      "other-answers": [
+        585,
+        888,
+        309
+      ]
+    },
+    {
+      "title": "What is 4 * 70",
+      "correct-answer": 280,
+      "other-answers": [
+        621,
+        177,
+        123
+      ]
+    },
+    {
+      "title": "What is 510 / 85?",
+      "correct-answer": 6,
+      "other-answers": [
+        7,
+        9,
+        3
+      ]
+    },
+    {
+      "title": "What is 84 / 84?",
+      "correct-answer": 1,
+      "other-answers": [
+        3,
+        9,
+        4
+      ]
+    },
+    {
+      "title": "What is 396 / 44?",
+      "correct-answer": 9,
+      "other-answers": [
+        2,
+        7,
+        6
+      ]
+    },
+    {
+      "title": "What is 24 + 24",
+      "correct-answer": 48,
+      "other-answers": [
+        56,
+        68,
+        45
+      ]
+    },
+    {
+      "title": "What is 48 - 35",
+      "correct-answer": 13,
+      "other-answers": [
+        86,
+        43,
+        36
+      ]
+    },
+    {
+      "title": "What is 88 + 72",
+      "correct-answer": 160,
+      "other-answers": [
+        810,
+        468,
+        158
+      ]
+    },
+    {
+      "title": "What is 70 - 88",
+      "correct-answer": -18,
+      "other-answers": [
+        318,
+        166,
+        75
+      ]
+    },
+    {
+      "title": "What is 31 + 51",
+      "correct-answer": 82,
+      "other-answers": [
+        20,
+        31,
+        49
+      ]
+    },
+    {
+      "title": "What is 94 + 43",
+      "correct-answer": 137,
+      "other-answers": [
+        376,
+        25,
+        897
+      ]
+    },
+    {
+      "title": "What is 20 + 97",
+      "correct-answer": 117,
+      "other-answers": [
+        931,
+        984,
+        696
+      ]
+    },
+    {
+      "title": "What is 59 + 96",
+      "correct-answer": 155,
+      "other-answers": [
+        773,
+        616,
+        413
+      ]
+    },
+    {
+      "title": "What is 5 * 68",
+      "correct-answer": 340,
+      "other-answers": [
+        943,
+        921,
+        896
+      ]
+    },
+    {
+      "title": "What is 49 - 17",
+      "correct-answer": 32,
+      "other-answers": [
+        88,
+        29,
+        30
+      ]
+    },
+    {
+      "title": "What is 102 / 51?",
+      "correct-answer": 2,
+      "other-answers": [
+        7,
+        8,
+        5
+      ]
+    },
+    {
+      "title": "What is 25 - 41",
+      "correct-answer": -16,
+      "other-answers": [
+        808,
+        87,
+        804
+      ]
+    },
+    {
+      "title": "What is 3 * 32",
+      "correct-answer": 96,
+      "other-answers": [
+        14,
+        82,
+        98
+      ]
+    },
+    {
+      "title": "What is 36 + 96",
+      "correct-answer": 132,
+      "other-answers": [
+        234,
+        386,
+        668
+      ]
+    },
+    {
+      "title": "What is 35 + 93",
+      "correct-answer": 128,
+      "other-answers": [
+        513,
+        357,
+        60
+      ]
+    },
+    {
+      "title": "What is 19 - 35",
+      "correct-answer": -16,
+      "other-answers": [
+        129,
+        123,
+        762
+      ]
+    },
+    {
+      "title": "What is 80 - 68",
+      "correct-answer": 12,
+      "other-answers": [
+        22,
+        61,
+        71
+      ]
+    },
+    {
+      "title": "What is 504 / 72?",
+      "correct-answer": 7,
+      "other-answers": [
+        8,
+        3,
+        4
+      ]
+    },
+    {
+      "title": "What is 3 * 79",
+      "correct-answer": 237,
+      "other-answers": [
+        812,
+        355,
+        645
+      ]
+    },
+    {
+      "title": "What is 40 / 40?",
+      "correct-answer": 1,
+      "other-answers": [
+        9,
+        4,
+        2
+      ]
+    },
+    {
+      "title": "What is 48 + 81",
+      "correct-answer": 129,
+      "other-answers": [
+        916,
+        780,
+        705
+      ]
+    },
+    {
+      "title": "What is 69 - 74",
+      "correct-answer": -5,
+      "other-answers": [
+        66,
+        29,
+        25
+      ]
+    },
+    {
+      "title": "What is 67 - 86",
+      "correct-answer": -19,
+      "other-answers": [
+        630,
+        182,
+        72
+      ]
+    },
+    {
+      "title": "What is 31 / 31?",
+      "correct-answer": 1,
+      "other-answers": [
+        7,
+        4,
+        6
+      ]
+    },
+    {
+      "title": "What is 72 - 77",
+      "correct-answer": -5,
+      "other-answers": [
+        81,
+        44,
+        46
+      ]
+    },
+    {
+      "title": "What is 6 * 62",
+      "correct-answer": 372,
+      "other-answers": [
+        321,
+        77,
+        875
+      ]
+    },
+    {
+      "title": "What is 25 - 47",
+      "correct-answer": -22,
+      "other-answers": [
+        351,
+        384,
+        685
+      ]
+    },
+    {
+      "title": "What is 79 + 57",
+      "correct-answer": 136,
+      "other-answers": [
+        475,
+        15,
+        420
+      ]
+    },
+    {
+      "title": "What is 1 * 27",
+      "correct-answer": 27,
+      "other-answers": [
+        33,
+        3,
+        94
+      ]
+    },
+    {
+      "title": "What is 10 / 5?",
+      "correct-answer": 2,
+      "other-answers": [
+        7,
+        8,
+        3
+      ]
+    },
+    {
+      "title": "What is 7 * 82",
+      "correct-answer": 574,
+      "other-answers": [
+        122,
+        954,
+        242
+      ]
+    },
+    {
+      "title": "What is 184 / 23?",
+      "correct-answer": 8,
+      "other-answers": [
+        2,
+        5,
+        1
+      ]
+    },
+    {
+      "title": "What is 94 / 94?",
+      "correct-answer": 1,
+      "other-answers": [
+        4,
+        7,
+        2
+      ]
+    },
+    {
+      "title": "What is 78 + 10",
+      "correct-answer": 88,
+      "other-answers": [
+        47,
+        9,
+        95
+      ]
+    },
+    {
+      "title": "What is 5 * 81",
+      "correct-answer": 405,
+      "other-answers": [
+        714,
+        435,
+        688
+      ]
+    },
+    {
+      "title": "What is 47 + 93",
+      "correct-answer": 140,
+      "other-answers": [
+        958,
+        554,
+        736
+      ]
+    },
+    {
+      "title": "What is 47 - 83",
+      "correct-answer": -36,
+      "other-answers": [
+        882,
+        980,
+        849
+      ]
+    },
+    {
+      "title": "What is 142 / 71?",
+      "correct-answer": 2,
+      "other-answers": [
+        1,
+        9,
+        8
+      ]
+    },
+    {
+      "title": "What is 80 - 18",
+      "correct-answer": 62,
+      "other-answers": [
+        15,
+        45,
+        71
+      ]
+    },
+    {
+      "title": "What is 1 * 51",
+      "correct-answer": 51,
+      "other-answers": [
+        44,
+        9,
+        38
+      ]
+    }
+  ]
+}
