@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>chaey</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://cdn.jsdelivr.net/gh/enderkingj/gimkit-clone/public/favicon.ico" type="image/x-icon"/>
+  <style>
+    body, html {
+      background: #313f8c;
+    }
+    input[type=submit] {
+      width: auto;
+    }
+    .makeform {
+      margin-bottom: 5px;
+    }
+    .ea {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+    <div id="particles-js"><canvas class="particles-js-canvas-el" width="1291" height="1000px"></canvas></div>
+    <div class="inputdiv-body-home">
+    <h1><span id="gimkit-font-join-large">Game</span><span id="gimkit-font-join-space-small"></span><span id="gimkit-font-join-small">Creator</span></h1>
+    <form id="game-name">
+    <input id="gname" placeholder="Enter Game Name" type="text" maxlength="20" class="makeform" required>
+    <input type="submit" value="Continue"><br>
+    </form>
+    <form id="game-author" style="display: none;">
+    <input id="author" placeholder="Enter Author Name" type="text" maxlength="20" class="makeform" required>
+    <input type="submit" value="Continue"><br>
+    </form>
+    <form id="game-description" style="display: none;">
+    <input id="desc" placeholder="Game Description" type="text" maxlength="100" class="makeform" required>
+    <input type="submit" value="Continue">
+    </form>
+    <form id="make-question" style="display: none;">
+    <input id="gtitle" class="makeform" placeholder="Question Title" type="text" maxlength="20" required>
+    <input id="c-answer" class="makeform" placeholder="Correct Answer" type="text" class="makeform" maxlength="100" required>
+    <input id="other-answer1" class="makeform" placeholder="Incorrect Answer 1" type="text" class="makeform" maxlength="100" required>
+    <input id="other-answer2" placeholder="Incorrect Answer 2" type="text" maxlength="100" class="makeform" required>
+    <input id="other-answer3" placeholder="Incorrect Answer 3" type="text" maxlength="100" class="makeform" required><br>
+    <input type="submit" value="Continue" style="margin: auto;margin-top: 10px;" class="ea">
+    </form>
+    </div>
+  <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script defer src="/create.js"></script>
+  <script src="https://rawgit.com/notifyjs/notifyjs/master/dist/notify.js"></script>
+  <script defer src="/particles/particle.js"></script>
+  <script defer src="/particles/papp.js"></script>
+</body>
+</html>

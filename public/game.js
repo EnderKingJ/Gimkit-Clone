@@ -1,6 +1,7 @@
 let perquestion = 1;
 let clapp = false;
 let boostquestion = 1;
+let questiondata
 let multiplier = 1;
 let streaksaver = false;
 let totalquestions;
@@ -115,7 +116,14 @@ balance = (balance*1) + (togive*1)
 socket.emit('balance', {room: localStorage.getItem('id'), balance: togive, username: localStorage.getItem('name')})
 }
 
+socket.on('canswer', (e) => {
+  if (e.name===localStorage.getItem('name')) {
+  $('#correct-answer').text('Correct Answer: '+e.answer)
+  }
+})
+
 function questionwrong() {
+socket.emit('getanswer', {room: localStorage.getItem('id'), q: questions, name: localStorage.getItem('name')})
 totalattempted += 1
 totalwrong += 1
 totake = insurance*(perquestion*multiplier)
@@ -127,7 +135,15 @@ if (balance<minbal) {
 socket.emit('balance', {room: localStorage.getItem('id'), balance: -totake, username: localStorage.getItem('name')})
 }
 
+socket.on('leaders', (e) => {
+  e = e.replace(/[0-10000000000000]/g, '');
+  e = e.replace(': $', '')
+  $('#leaderboard').html(e)
+  
+})
+
 socket.on('questions', (questions) => {
+  questiondata = questions
   document.getElementsByClassName('button-frame-01')[0].innerHTML = questions.map((q) => {
     var styles = _.shuffle(["b1", "b2", "b3", "b4"])
     totalquestions = q.qnumber
@@ -149,6 +165,7 @@ socket.on('kickuser', (e) => {
   }})
 
 socket.on('start', (e) => {
+  userBalances = e
   document.getElementById('before-start').style.display = "none"
   document.getElementById(`q${questions}`).style.display = "block"
 })
@@ -157,6 +174,7 @@ socket.on('gameend', (e) => {
   console.log(e, ' e')
   const standings = e[localStorage.getItem('name')]
   console.log(standings, ' EEEEE')
+  $('#leaderboard').hide()
   let finalplacement = standings ? standings.placement:undefined
   if (finalplacement===1) {
     finalplacement = 1+'st'

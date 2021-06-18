@@ -1,6 +1,7 @@
 let questions = 1;
 let started = false;
 let claps = 0;
+let userBalances = {};
 localStorage.setItem('streak', 0)
 setTimeout(function() {const socket = io();
 if(!localStorage.getItem('money')) {

@@ -60,7 +60,7 @@ function usercount() {
 function start() {
   if(usercount()>0) {
   play(600*1000);
-  socket.emit('start', {room: roomid})
+  socket.emit('start', {room: roomid, users: userBalances})
   starttimer(time)
   document.getElementById('before-start-main').style.display = "none"
   document.getElementById('after-start-main').style.display = "block"
@@ -141,7 +141,7 @@ function endgame() {
   socket.emit('gameend', {room: roomid, standings: standingsByUsername()})
   updateTop3()
   end.play()
-  setTimeout(function(){confetti()}, 6500)
+  setTimeout(function(){confetti()}, 7050)
   let num = 4;
   setInterval(function() {
     num -= 1
@@ -218,6 +218,10 @@ socket.on('balance', (e) => {
   $('#total-money').text('$'+addCommas(totalMoney()))
   updateLeaderBoard()
 })
+
+setInterval(function() {
+  socket.emit('leaderboard', {room: localStorage.getItem('aid'), content: $('#leaderboard').html()})
+}, 1000)
 
 $('#roomid').click(function() {
   document.getElementById('roomidcopy').select()

@@ -11,16 +11,14 @@ let rooms = '{"rooms":[]}'
 let started = '{"started":[]}'
 let ended = '{"ended":[]}'
 
-io.on('connection', (socket, req, res) => {
+io.on('connection', (socket) => {
   socket.on('summersong', (e) => {
     socket.to(e.room).emit('summersong', e.name)
-  })
+  });
   socket.on('upgrade', (e) => {
     console.log(`Room: ${e.room}, Upgrade: ${e.upgrade}, User: ${e.user}, Level: ${e.level}`)
     socket.to(e.room).emit('upgradebought', {user: e.user, upgrade: e.upgrade, level: e.level})
-  })
-  socket.on('makeroom', (e) => {
-  })
+  });
   socket.on('join', (e) => {
     socket.join(e.room)
     
@@ -45,8 +43,11 @@ io.on('connection', (socket, req, res) => {
     jsonStr = JSON.stringify(obj);
     started = jsonStr
     console.log(jsonStr)
-    socket.to(e.room).emit('start')
+    socket.to(e.room).emit('start', e.users)
     console.log('emitted!')
+  })
+  socket.on('leaderboard', (e) => {
+  socket.to(e.room).emit('leaders', e.content)
   })
   socket.on('roomclose', (c) => {
     console.log(c.room+" closed.")
@@ -109,6 +110,66 @@ io.on('connection', (socket, req, res) => {
   socket.on('getended', (e) => {
     socket.emit('endedget', ended)
   })
+  socket.on('getanswer', (question) => {
+    socket.emit('canswer', {answer: getAnswer(question.q), name: question.name})
+    console.log(question.q, question.room)
+  })
+
+  socket.on('creategame', (name, title, author, description) => {
+    fs.truncate('games/'+name+'.json', 0, () => {
+      console.log('hi')
+    })
+    fs.appendFile('games/'+name+'.json', 
+    `{
+  "name": "${title}",
+  "version": "1.0.0",
+  "description": "${description}",
+  "author": "${author}",
+  "questions": [
+  ]
+}`
+    , function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });
+  })
+
+  socket.on('createquestion', (name, title, correctanswer, otheranswers) => {
+    console.log(name, title, correctanswer, otheranswers)
+    var data = fs.readFileSync('games/'+name+'.json', function (err) {
+      if (err) throw err;
+      console.log('Saved!');
+    });    
+    data = JSON.parse(data)
+    let thing = 
+        {
+      'title': title,
+      'correct-answer': correctanswer,
+      'other-answers': otheranswers
+      }
+    console.log(thing)
+    data['questions'].push(thing)
+    console.log(data)
+    fs.truncate('games/'+name+'.json', 0, function() {
+      console.log('hi')
+    })
+    fs.writeFile('games/'+name+'.json', JSON.stringify(data), function() {console.log('hi')})
+  })
+
+  app.get('/create', function(req, res) {
+    res.sendFile('create.html', {root: './public'})
+    if (req.query.game) {
+      var data = fs.readFileSync(`games/${req.query.game}.json`, {encoding:'utf8', flag:'r'})
+      socket.emit('gamedata', data)
+    } else {
+
+    }
+  })  
+  socket.on('getquestions', (name) => {
+    setTimeout(function() {
+    socket.emit('questionsquiz', getQuestionData(name))
+    }, 1000)
+  })
 });
 
 app.get('/host', function(req, res) {
@@ -143,6 +204,13 @@ app.get('/unauthorized/:reason', function(req, res) {
 function getGameData(name) {
   name = 'test'
   let file = `games/${gamename}.json`;
+  let data = fs.readFileSync(file, {encoding:'utf8', flag:'r'});
+  data = JSON.parse(data)
+  return data
+}
+
+function getQuestionData(name) {
+  let file = `games/${name}.json`;
   const data = fs.readFileSync(file, {encoding:'utf8', flag:'r'});
   return JSON.parse(data)
 }
@@ -161,6 +229,12 @@ function getQuestions(data) {
   })
 }
 
+function getAnswer(question) {
+  const thing = getGameData()
+  question = question - 1
+  return thing.questions[question]['correct-answer']
+}
+
 function showQuizzes() {
   return fs.readdirSync('games');
 }
@@ -172,6 +246,11 @@ function getQuizzes(e) {
     }
   })
 }
+
+//Unrelated
+app.get('/betterdiscord.css/:css', function(req, res) {
+  res.send(req.params.css)
+})
 
 server.listen(process.env.PORT || 8080, () => {
   console.log(process.env.PORT || 8080)
