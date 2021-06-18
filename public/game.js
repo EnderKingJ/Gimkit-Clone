@@ -136,8 +136,6 @@ socket.emit('balance', {room: localStorage.getItem('id'), balance: -totake, user
 }
 
 socket.on('leaders', (e) => {
-  e = e.replace(/[0-10000000000000]/g, '');
-  e = e.replace(': $', '')
   $('#leaderboard').html(e)
   
 })

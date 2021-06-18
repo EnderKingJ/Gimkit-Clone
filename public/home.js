@@ -207,7 +207,9 @@ function updateLeaderBoard() {
    document.getElementById('leaders').remove()
   }
   $('#leaderboard').html("<ol id='leaders'>" + standings().map((e) => {
-     return ` <li> ${e.username}: $${addCommas(e.balance)}</li>`
+    let lbdata
+    if(location.href.includes('showmoney')) {lbdata=` <li> ${e.username}: $${addCommas(e.balance)}</li>`} else {lbdata=` <li> ${e.username}</li>`}}
+     return lbdata
   }).join("\n") + "</ol>")
 }
 
